@@ -1,0 +1,294 @@
+/**
+ *  Common Css
+ */
+
+/********************************/
+/*        Global Default        */
+/********************************/
+
+
+html, body {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.42857143;
+    padding: 0em;
+    margin: 0em;
+}
+
+p {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.0em;
+}
+
+h5 {
+    font-size: 0.88em;
+}
+
+ul {
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  -ms-padding-start: 0;
+  -o-padding-start: 0;
+  padding-start: 0;
+
+  -webkit-padding-end: 0;
+  -moz-padding-end: 0;
+  -ms-padding-end: 0;
+  -o-padding-end: 0;
+  padding-end: 0;
+
+  -webkit-margin-before: 0;
+  -moz-margin-before: 0;
+  -ms-margin-before: 0;
+  -o-margin-before: 0;
+  margin-before: 0;
+
+  -webkit-margin-after: 0;
+  -moz-margin-after: 0;
+  -ms-margin-after: 0;
+  -o-margin-after: 0;
+  margin-after: 0;
+}
+
+/********************************/
+/*          Component           */
+/********************************/
+
+
+/**
+ *  Website Framework
+ *    @ section:
+ *        { min-height: 600px, skewY: -5deg }
+ *
+ *    @ section.top-section-bgimage
+ *        { height: 688px, margin-top: -54px }
+ *
+ *    @ section.top-section-bgcolor
+ *        {}
+ *
+ *    @ section.bottom-section-bgimage
+ *        {}
+ *
+ *    @ section.bottom-section-bgcolor
+ *        { margin-bottom: -54px }
+ *
+ *    @ background-wrapper:
+ *        { height: 858px, margin-top: -54.5px }
+ *
+ *    @ footer#footer:
+ *        { min-height: 110px }
+ */
+
+
+div.main {
+  position: relative;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 600px;
+
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+
+
+/*  For Section Background  */
+
+section.top-section-bgimage,
+section.top-section-bgcolor,
+section.bottom-section-bgimage,
+section.bottom-section-bgcolor {
+  z-index: -1;
+}
+
+section.top-section-bgimage {
+  height: 688px;
+  margin-top: -54px;
+}
+
+section.top-section-bgcolor {
+}
+
+section.bottom-section-bgimage {
+}
+
+section.bottom-section-bgcolor {
+  margin-bottom: -54px;
+}
+
+
+/*  For Section Content  */
+
+section >.background-wrapper,
+section >.content-wrapper {
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+}
+
+section > .background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;   /*  For RWD, this feature needs to be set to 'contain'  */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 858px;
+  height: 100%;
+  margin-top: -54.5px;
+}
+
+section > .content-wrapper {
+  padding-top: 30px;
+}
+
+section > .content-wrapper > .header,
+section > .content-wrapper > .content{
+  text-align: center;
+}
+
+section.top-section-bgimage > .content-wrapper {
+  margin-top: 54px;
+}
+
+
+/**
+ *  Navbar Styles
+ */
+
+nav#navbar {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 30px;
+  width: 180px;
+  height: 100%;
+  background-color: rgba(51, 126, 121, 0.7);
+}
+
+nav#navbar ul {
+  list-style-type: none;
+}
+
+nav#navbar ul > li {
+  width: 100%;
+  height: 70px;
+  font-size: 1.1em;
+  margin: 15px auto;
+  background-color: rgba(49, 125, 121, 0.8);
+}
+
+nav#navbar a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+nav#navbar .header{
+  text-align: center;
+
+}
+
+/**
+ *  Footer Styles
+ */
+
+footer#footer {
+  z-index: 10;
+  width: 100%;
+  height: 110px;
+  text-align: center;
+  color: white;
+  background-color: rgba(48, 125, 125, 1);
+}
+
+
+/********************************/
+/*        Global Classes        */
+/********************************/
+
+.header {
+  margin: 30px auto;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.horizontal-vertical-center {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.width-25,
+.width-33,
+.width-40,
+.width-50,
+.width-55 {
+  display: inline-block;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-33 {
+  width: 33%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-55 {
+  width: 55%;
+}
+
+/********************************/
+/*          Responsive          */
+/********************************/
+
+@media only screen and (max-width: 1240px) {
+  section > .content-wrapper {
+    padding-left: 140px;
+  }
+}

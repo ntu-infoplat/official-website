@@ -1,0 +1,75 @@
+/**
+ *  Index Css
+ */
+
+/********************************/
+/*          Section 1           */
+/*        (For Sliders)         */
+/********************************/
+
+section.section-1 {
+}
+
+section.section-1 > .background-wrapper {
+  background-image: url("../imgs/color blur/6-01.jpg");
+}
+
+section.section-1 > .content-wrapper > .header {
+  color: white;
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+section.section-1 > .content-wrapper > .content {
+  color: white;
+  margin-left: 450px;
+  margin-top: -50px;
+}
+
+
+/********************************/
+/*          Section 2           */
+/*        (For Concept)         */
+/********************************/
+
+section.section-2 > .background-wrapper {
+  background-image: url("../imgs/pic/07_cut.png");
+}
+
+section.section-2 > .content-wrapper > .header,
+section.section-2 > .content-wrapper > .content {
+  color: black;
+}
+
+section.section-2 > .content-wrapper > .content {
+  margin-top:100px;
+}
+
+section.section-2 > .content-wrapper > .content > div {
+  text-align: left;
+  font-size:1.3em;
+}
+
+/********************************/
+/*          Section 3           */
+/*      (For Description)       */
+/********************************/
+
+section.section-3 > .background-wrapper {
+  background-color: #a7a7a7;
+}
+section.section-3 > .content-wrapper > .content > .article{
+  color: white;
+}
+section.section-3 > .content-wrapper > .content > .article > .title-block{
+  text-align: left;
+  font-size: 1.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+}
+section.section-3 > .content-wrapper > .content > .article > .content-block{
+  padding: 50px;
+  margin-bottom: 50px;
+  background-color: #8f8989;
+  text-align: left;
+}

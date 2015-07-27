@@ -1,7 +1,7 @@
 [
-  {"title": "資料彙整", "url": "#"},
-  {"title": "專題報導", "url": "#"},
-  {"title": "應用開發", "url": "#"},
+  {"title": "資料彙整", "url": "infomation.html"},
+  {"title": "專題報導", "url": "report.html"},
+  {"title": "應用開發", "url": "application.html"},
   {"title": "許願池", "url": "#"},
   {"title": "關於我們", "url": "#"}
 ]

@@ -27,16 +27,23 @@ section.section-1 > .content-wrapper > .content {
   margin-left: 300px;
 }
 
+section.section-2 > .background-wrapper {
+  background-image: url("../imgs/pic/04_cut.png");
+  background-size:cover;
+  background-position: 50% 0%;
+  margin-top:-8em;
+}
+
 
 /********************************/
-/*          Section 2           */
+/*          Section 3           */
 /*        (For Concept)         */
 /********************************/
-section.section-2 {
+section.section-3 {
   margin-top: -5em;
 }
 
-section.section-2 > .background-wrapper {
+section.section-3 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
   background-size:cover;
   background-position: 50% 0%;
@@ -44,41 +51,41 @@ section.section-2 > .background-wrapper {
 
 }
 
-section.section-2 > .content-wrapper > .header,
-section.section-2 > .content-wrapper > .content {
+section.section-3 > .content-wrapper > .header,
+section.section-3 > .content-wrapper > .content {
   color: black;
 }
 
-section.section-2 > .content-wrapper > .content > .article{
+section.section-3 > .content-wrapper > .content > .article{
 	padding: 50px;
 	margin-bottom: 50px;
 	background-color: rgba(53,130,113,0.5);
 	color: white;
 }
 
-section.section-2 > .content-wrapper > .content > .article > .title-block{
+section.section-3 > .content-wrapper > .content > .article > .title-block{
 	text-align: left;
 }
-section.section-2 > .content-wrapper > .content > .article > .title-block > .title{
+section.section-3 > .content-wrapper > .content > .article > .title-block > .title{
 	font-size: 1.5em;
 }
-section.section-2 > .content-wrapper > .content > .article > .title-block > .date{
+section.section-3 > .content-wrapper > .content > .article > .title-block > .date{
 	font-size: 0.6em;
 	text-align: center;
 	margin-left: -10%;
 }
-section.section-2 > .content-wrapper > .content > .article > .title-block > .date > span{
+section.section-3 > .content-wrapper > .content > .article > .title-block > .date > span{
 	font-size: 2.5em;
 }
-section.section-2 > .content-wrapper > .content > .article > .content-block{
+section.section-3 > .content-wrapper > .content > .article > .content-block{
 	border-top: 1px solid rgba(255,255,255,0.6);
 	text-align: left;
 	color: white;
 }
-section.section-2 > .content-wrapper > .content > .article > .content-block img{
+section.section-3 > .content-wrapper > .content > .article > .content-block img{
 	width: 100%;
 }
-section.section-2 > .content-wrapper > .content > .article > .content-block > .intro{
+section.section-3 > .content-wrapper > .content > .article > .content-block > .intro{
 	margin-left: 10%;
 }
 

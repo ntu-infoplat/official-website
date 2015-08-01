@@ -30,7 +30,12 @@ section.section-1 > .content-wrapper > .content {
 /*          Section 2           */
 /*      (For Introduction)      */
 /********************************/
-
+section.section-2 > .background-wrapper {
+  background-image: url("../imgs/pic/04_cut.png");
+  background-size:cover;
+  background-position: 50% 0%;
+  margin-top:-8em;
+}
 
 
 /********************************/

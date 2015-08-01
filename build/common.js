@@ -22,17 +22,17 @@ var NavBar = React.createClass({displayName: "NavBar",
   render: function () {
     var linkNode = this.state.data.map(function (link, i) {
       return (
-        React.createElement("li", {key: i}, 
+        React.createElement("li", {key: i},
             React.createElement("a", {className: "horizontal-vertical-center", href: link.url}, link.title)
         )
       )
     });
     return (
-      React.createElement("div", {className: "content-wrapper"}, 
-        React.createElement("div", {className: "header"}, 
+      React.createElement("div", {className: "content-wrapper"},
+        React.createElement("div", {className: "header"},
           React.createElement("img", {src: "./imgs/icon/logo.svg"})
-        ), 
-        React.createElement("div", {className: "content"}, 
+        ),
+        React.createElement("div", {className: "content"},
           React.createElement("ul", null, linkNode)
         )
       )
@@ -47,7 +47,7 @@ var NavBar = React.createClass({displayName: "NavBar",
 var Footer = React.createClass({displayName: "Footer",
   render: function () {
     return (
-      React.createElement("div", {className: "width-50"}, 
+      React.createElement("div", {className: "width-50"},
         React.createElement("p", null, "Infoplat.com"), 
         React.createElement("p", null, "Copyright © Infoplat All Right Reserved.")
       )

@@ -102,15 +102,15 @@ div.main {
 
 section {
   position: relative;
-  //overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
   min-height: 600px;
 
-  //-webkit-transform: skewY(5deg);
-  //-moz-transform: skewY(5deg);
-  //-ms-transform: skewY(5deg);
-  //-o-transform: skewY(5deg);
-  //transform: skewY(5deg);
+  /*-webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);*/
 }
 
 
@@ -144,15 +144,16 @@ section.bottom-section-bgcolor {
 
 section >.background-wrapper,
 section >.content-wrapper {
-  //-webkit-transform: skewY(-5deg);
-  //-moz-transform: skewY(-5deg);
-  //-ms-transform: skewY(-5deg);
-  //-o-transform: skewY(-5deg);
-  transform: skewY(0deg);
+  /*-webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(0deg);*/
 }
 
 section > .background-wrapper {
   position: absolute;
+  z-index: -999;
   top: 0;
   left: 0;
   background-size: cover;   /*  For RWD, this feature needs to be set to 'contain'  */

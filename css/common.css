@@ -102,15 +102,15 @@ div.main {
 
 section {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   width: 100%;
   min-height: 600px;
 
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
-  transform: skewY(5deg);
+  //-webkit-transform: skewY(5deg);
+  //-moz-transform: skewY(5deg);
+  //-ms-transform: skewY(5deg);
+  //-o-transform: skewY(5deg);
+  //transform: skewY(5deg);
 }
 
 
@@ -124,7 +124,7 @@ section.bottom-section-bgcolor {
 }
 
 section.top-section-bgimage {
-  height: 688px;
+  height: 810px;
   margin-top: -54px;
 }
 
@@ -136,6 +136,7 @@ section.bottom-section-bgimage {
 
 section.bottom-section-bgcolor {
   margin-bottom: -54px;
+  overflow: auto;
 }
 
 
@@ -143,11 +144,11 @@ section.bottom-section-bgcolor {
 
 section >.background-wrapper,
 section >.content-wrapper {
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
-  transform: skewY(-5deg);
+  //-webkit-transform: skewY(-5deg);
+  //-moz-transform: skewY(-5deg);
+  //-ms-transform: skewY(-5deg);
+  //-o-transform: skewY(-5deg);
+  transform: skewY(0deg);
 }
 
 section > .background-wrapper {
@@ -191,6 +192,10 @@ nav#navbar {
   background-color: rgba(51, 126, 121, 0.7);
 }
 
+nav#navbar img{
+  width: 50%;
+}
+
 nav#navbar ul {
   list-style-type: none;
 }
@@ -226,6 +231,20 @@ footer#footer {
   text-align: center;
   color: white;
   background-color: rgba(48, 125, 125, 1);
+}
+
+/**
+ * Right Line
+ */
+div#rightLine {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  right: 0px;
+  width: 120px;
+  height: 100%;
+  background-color: transparent;
+  border-left: 1px dashed white;
 }
 
 

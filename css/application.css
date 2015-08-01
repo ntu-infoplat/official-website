@@ -12,7 +12,7 @@ section.section-1 {
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/pic/01.jpg");
+  background-image: url("../imgs/line/03_line.png");
 }
 
 section.section-1 > .content-wrapper > .header {
@@ -32,9 +32,16 @@ section.section-1 > .content-wrapper > .content {
 /*          Section 2           */
 /*        (For Concept)         */
 /********************************/
+section.section-2 {
+  margin-top: -5em;
+}
 
 section.section-2 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
+  background-size:cover;
+  background-position: 50% 0%;
+  min-height: 1000px;
+
 }
 
 section.section-2 > .content-wrapper > .header,

@@ -52,6 +52,12 @@ section.section-2 > .content-wrapper > .content > .article{
 	color: white;
 }
 
+section.section-2 > .content-wrapper > .content > .article > .button{
+  text-align: right;
+  margin-top: -50px;
+  margin-right: -50px;
+}
+
 section.section-2 > .content-wrapper > .content > .article > .title-block{
 	text-align: left;
 }

@@ -12,7 +12,7 @@ section.section-1 {
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/color blur/2-01.jpg");
+  background-image: url("../imgs/line/04_line.png");
 }
 
 section.section-1 > .content-wrapper > .header {
@@ -35,6 +35,9 @@ section.section-1 > .content-wrapper > .content {
 
 section.section-2 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
+  background-size:cover;
+  background-position: 50% 0%;
+  margin-top:-8em;
 }
 
 section.section-2 > .content-wrapper > .header,

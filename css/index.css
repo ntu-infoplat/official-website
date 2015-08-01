@@ -8,11 +8,12 @@
 /********************************/
 
 section.section-1 {
-  margin-bottom: 10em;
+  margin-bottom: -5em;
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/pic/02.jpg");
+  background-image: url("../imgs/line/01_line.png");
+  background-position: 50%;
 }
 
 section.section-1 > .content-wrapper > .header {
@@ -31,11 +32,12 @@ section.section-1 > .content-wrapper > .content {
 /********************************/
 
 section.section-2 > .background-wrapper {
-  background-image: url("../imgs/black blur/1.jpg");
+  background-image: url("../imgs/pic/03_cut.png");
 }
 
 section.section-2 > .content-wrapper > .header,
 section.section-2 > .content-wrapper > .content {
+  padding-top:1em;
   color: white;
 }
 
@@ -44,6 +46,14 @@ section.section-2 > .content-wrapper > .content {
 /*      (For Description)       */
 /********************************/
 
+section.section-color-line{
+  min-height: 253px;
+}
+section.section-color-line > .background-wrapper{
+  background-image: url("../imgs/line/brown_line.png");
+  min-height: 353px;
+}
+
 section.section-3 > .background-wrapper {
-  background-color: #958A86;
+  background-color: #958A8D;
 }

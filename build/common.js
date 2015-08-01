@@ -57,3 +57,8 @@ var Footer = React.createClass({displayName: "Footer",
 
 React.render(React.createElement(NavBar, {data: "./json/navbar.json"}), document.getElementById('navbar'));
 React.render(React.createElement(Footer, null), document.getElementById('footer'));
+
+$(document).ready(function(){
+  var bodyHeight = $(document).height();
+  $("#rightLine").height(bodyHeight);
+});

@@ -55,5 +55,7 @@ var Footer = React.createClass({
   }
 });
 
+
 React.render(<NavBar data="./json/navbar.json"/>, document.getElementById('navbar'));
 React.render(<Footer />, document.getElementById('footer'));
+

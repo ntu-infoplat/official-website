@@ -8,10 +8,11 @@
 /********************************/
 
 section.section-1 {
+  margin-bottom:-5em;
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/color blur/6-01.jpg");
+  background-image: url("../imgs/line/02_line.png");
 }
 
 section.section-1 > .content-wrapper > .header {
@@ -50,13 +51,25 @@ section.section-2 > .content-wrapper > .content > div {
   font-size:1.3em;
 }
 
+/**
+ * 
+ */
+section.section-color-line{
+  min-height: 253px;
+}
+section.section-color-line > .background-wrapper{
+  background-image: url("../imgs/line/red_line.png");
+  min-height: 309px;
+} 
+
 /********************************/
 /*          Section 3           */
 /*      (For Description)       */
 /********************************/
-
+section.section-3{
+}
 section.section-3 > .background-wrapper {
-  background-color: #a7a7a7;
+  background-color: #a9a9a9;
 }
 section.section-3 > .content-wrapper > .content > .article{
   color: white;

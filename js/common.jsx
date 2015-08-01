@@ -47,9 +47,15 @@ var NavBar = React.createClass({
 var Footer = React.createClass({
   render: function () {
     return (
-      <div className="width-50">
-        <p>InfoPlat.org</p>
-        <p> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a></p>
+      <div className="width-75">
+        <div className="horizontal-vertical-center">
+          <span>
+            InfoPlat&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+              CC-BY-NC-SA 4.0
+            </a>
+          </span>
+        </div>
       </div>
     );
   }
@@ -58,4 +64,3 @@ var Footer = React.createClass({
 
 React.render(<NavBar data="./json/navbar.json"/>, document.getElementById('navbar'));
 React.render(<Footer />, document.getElementById('footer'));
-

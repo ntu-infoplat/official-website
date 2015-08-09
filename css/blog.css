@@ -30,7 +30,12 @@ section.section-1 > .content-wrapper > .content {
 /*          Section 2           */
 /*      (For Introduction)      */
 /********************************/
-
+section.section-2 > .background-wrapper {
+  background-image: url("../imgs/pic/04_cut.png");
+  background-size:cover;
+  background-position: 50% 0%;
+  margin-top:-8em;
+}
 
 
 /********************************/
@@ -79,8 +84,13 @@ section.section-3 > .content-wrapper > .content > .article > .title-block > .dat
 section.section-3 > .content-wrapper > .content > .article > .content-block{
 	padding-top: 10px;
 	border-top: 1px solid rgba(255,255,255,0.6);
+	border-bottom: 1px solid rgba(255,255,255,0.6);
 	text-align: left;
 	color: white;
+}
+section.section-3 > .content-wrapper > .content > .article > .readmore{
+	padding-top: 15px;
+	text-align: right;
 }
 section.section-3 > .content-wrapper > .content > .article > .content-block img{
 	width: 100%;

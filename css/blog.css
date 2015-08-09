@@ -42,7 +42,6 @@ section.section-3 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
   background-size:cover;
   background-position: 50% 0%;
-  margin-top:-8em;
 }
 
 section.section-3 > .content-wrapper > .header,

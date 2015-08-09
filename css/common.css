@@ -160,12 +160,18 @@ section > .background-wrapper {
   width: 100%;
   min-height: 858px;
   height: 100%;
-  margin-top: -54.5px;
+  /*margin-top: -54.5px;*/
 }
+
 
 section > .content-wrapper {
   padding-top: 30px;
 }
+
+section > .content-wrapper > .header {
+  margin-top: 100px;
+}
+
 
 section > .content-wrapper > .header,
 section > .content-wrapper > .content{
@@ -173,7 +179,7 @@ section > .content-wrapper > .content{
 }
 
 section.top-section-bgimage > .content-wrapper {
-  margin-top: 54px;
+  /*margin-top: 54px;*/
 }
 
 

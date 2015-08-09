@@ -1,57 +1,46 @@
 /**
- *  Index Css
+ *  Application Css
  */
 
 /********************************/
 /*          Section 1           */
-/*        (For Sliders)         */
 /********************************/
 
 section.section-1 {
-
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/line/03_line.png");
+  background-image: url("../imgs/pic/01.jpg");
 }
 
-section.section-1 > .content-wrapper > .header {
+section.section-1 > .content-wrapper {
   color: white;
-  font-size: 2em;
-  margin-top: 100px;
 }
 
-section.section-1 > .content-wrapper > .content {
-  color: white;
-  margin-top: -50px;
-  margin-left: 300px;
-}
+
+/********************************/
+/*          Section 2           */
+/********************************/
 
 section.section-2 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
-  background-size:cover;
-  background-position: 50% 0%;
-  margin-top:-8em;
 }
 
 
 /********************************/
 /*          Section 3           */
-/*        (For Concept)         */
 /********************************/
+
 section.section-3 {
-  margin-top: -5em;
 }
 
 section.section-3 > .background-wrapper {
   background-image: url("../imgs/pic/04_cut.png");
-  background-position: 50% 0%;
-  background-repeat: repeat-y;
+  /*background-repeat: repeat-y;*/
   /*min-height: 1000px;*/
 }
 
-section.section-3 > .content-wrapper > .header,
-section.section-3 > .content-wrapper > .content {
+section.section-3 > .content-wrapper {
   color: black;
 }
 

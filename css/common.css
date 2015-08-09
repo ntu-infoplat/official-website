@@ -6,37 +6,37 @@
 /*        Global Default        */
 /********************************/
 
-
 html, body {
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.42857143;
-    padding: 0em;
-    margin: 0em;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.42857143;
+  padding: 0em;
+  margin: 0em;
+  overflow-y: hidden;
 }
 
 p {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 h1 {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 h2 {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 h3 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 h4 {
-    font-size: 1.0em;
+  font-size: 1.0em;
 }
 
 h5 {
-    font-size: 0.88em;
+  font-size: 0.88em;
 }
 
 ul {
@@ -73,22 +73,26 @@ ul {
 /**
  *  Website Framework
  *    @ section:
- *        { min-height: 600px, skewY: -5deg }
+ *      { min-height: 650px, skew: (0deg, 7.5deg) }
  *
- *    @ section.top-section-bgimage
- *        { height: 688px, margin-top: -54px }
+ *      > .background-wrapper
+ *         { width: 100%, height: 125%, margin-top: -81px }
  *
- *    @ section.top-section-bgcolor
- *        {}
+ *      > .background-wrapper,
+ *      > .content-wrapper
+ *         { skew: (0deg, -7.5deg) }
  *
- *    @ section.bottom-section-bgimage
- *        {}
+ *    @ section.top-section
+ *      { min-height: 680px, margin-top: -81px }
  *
- *    @ section.bottom-section-bgcolor
- *        { margin-bottom: -54px }
+ *    @ section.top-section > .content-wrapper > .header
+ *      { margin-top: 141px }
  *
- *    @ background-wrapper:
- *        { height: 858px, margin-top: -54.5px }
+ *    @ section.bottom-section
+ *      { margin-bottom: -81.5px }
+ *
+ *    @ section > .background-wrapper:
+ *
  *
  */
 
@@ -100,54 +104,29 @@ div.main {
 
 section {
   position: relative;
-  /*overflow: hidden;*/
   width: 100%;
-  min-height: 600px;
+  min-height: 650px;
+  /*margin-top: 100px;*/
+  overflow: hidden;
 
-  /*-webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
-  transform: skewY(5deg);*/
+  -webkit-transform: skew(0deg, 7.5deg);
+  -moz-transform: skew(0deg, 7.5deg);
+  -ms-transform: skew(0deg, 7.5deg);
+  -o-transform: skew(0deg, 7.5deg);
+  transform: skew(0deg, 7.5deg);
+}
+
+section > .background-wrapper,
+section > .content-wrapper {
+  -webkit-transform: skew(0deg, -7.5deg);
+  -moz-transform: skew(0deg, -7.5deg);
+  -ms-transform: skew(0deg, -7.5deg);
+  -o-transform: skew(0deg, -7.5deg);
+  transform: skew(0deg, -7.5deg);
 }
 
 
 /*  For Section Background  */
-
-section.top-section-bgimage,
-section.top-section-bgcolor,
-section.bottom-section-bgimage,
-section.bottom-section-bgcolor {
-  z-index: -1;
-}
-
-section.top-section-bgimage {
-  height: 810px;
-  /*margin-top: -54px;*/
-}
-
-section.top-section-bgcolor {
-}
-
-section.bottom-section-bgimage {
-}
-
-section.bottom-section-bgcolor {
-  /*margin-bottom: -54px;*/
-  overflow: auto;
-}
-
-
-/*  For Section Content  */
-
-section >.background-wrapper,
-section >.content-wrapper {
-  /*-webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
-  transform: skewY(0deg);*/
-}
 
 section > .background-wrapper {
   position: absolute;
@@ -158,30 +137,81 @@ section > .background-wrapper {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 858px;
-  height: 100%;
-  /*margin-top: -54.5px;*/
+  height: 125%;
+  margin-top: -81px;
 }
 
 
+/*  For Section Content  */
+
 section > .content-wrapper {
-  padding-top: 30px;
 }
 
 section > .content-wrapper > .header {
-  margin-top: 100px;
+  margin: 60px 0px;
 }
-
 
 section > .content-wrapper > .header,
 section > .content-wrapper > .content{
   text-align: center;
 }
 
-section.top-section-bgimage > .content-wrapper {
-  /*margin-top: 54px;*/
+
+/* For Top & Bottom Section */
+
+section.top-section {
+  min-height: 680px;
+  margin-top: -81px;
 }
 
+section.top-section > .content-wrapper > .header {
+  margin-top: 141px; /* 81 + 60 */
+}
+
+section.bottom-section {
+  margin-bottom: -81.5px;
+}
+
+
+/**
+ *  Line Styles
+ */
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.5%;
+}
+
+/* Line Position */
+
+.line-left {
+  border-left: 1px dashed;
+}
+
+.line-right {
+  border-right: 1px dashed;
+}
+
+.line-top {
+  border-top: 1px dashed;
+}
+
+.line-bottom {
+  border-bottom: 1px dashed;
+}
+
+/* Line Color */
+
+.line-white {
+  border-color: white;
+}
+
+.line-black {
+  border-color: black;
+}
 
 /**
  *  Navbar Styles
@@ -197,15 +227,20 @@ nav#navbar {
   background-color: rgba(51, 126, 121, 0.7);
 }
 
-nav#navbar img{
+nav#navbar .header{
+  text-align: center;
+}
+
+nav#navbar .header > img{
+  padding-top: 15px;
   width: 50%;
 }
 
-nav#navbar ul {
+nav#navbar .content > ul {
   list-style-type: none;
 }
 
-nav#navbar ul > li {
+nav#navbar .content > ul > li {
   width: 100%;
   height: 70px;
   font-size: 1.1em;
@@ -213,27 +248,23 @@ nav#navbar ul > li {
   background-color: rgba(49, 125, 121, 0.8);
 }
 
-nav#navbar a {
+nav#navbar .content a {
   width: 100%;
   height: 100%;
   color: white;
   text-decoration: none;
 }
 
-nav#navbar .header{
-  text-align: center;
-
-}
 
 /**
  *  Footer Styles
  */
 
 footer#footer {
+  position: relative;
   z-index: 10;
   width: 100%;
-  padding: 1em;
-  /*height: 110px;*/
+  padding: 1em 0;
   text-align: center;
   color: white;
   background-color: rgba(48, 125, 125, 1);
@@ -242,12 +273,14 @@ footer#footer {
 /**
  * Right Line
  */
+
 div#rightLine {
-  position: absolute;
+  /*position: absolute;*/
+  position: fixed;
   z-index: 50;
   top: 0;
   right: 0px;
-  width: 10%;
+  width: 8%;
   height: 100%;
   background-color: transparent;
   border-left: 1px dashed white;
@@ -259,7 +292,7 @@ div#rightLine {
 /********************************/
 
 .header {
-  margin: 30px auto;
+  /*margin: 30px auto;*/
 }
 
 .content {

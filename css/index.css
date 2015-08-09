@@ -8,52 +8,47 @@
 /********************************/
 
 section.section-1 {
-  margin-bottom: -5em;
+  margin-bottom: 150px;
 }
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/line/01_line.png");
-  background-position: 50%;
-}
-
-section.section-1 > .content-wrapper > .header {
-  margin-top: 100px;
+  background-image: url("../imgs/pic/02.jpg");
 }
 
 section.section-1 > .content-wrapper > .content {
   color: white;
-  margin-left: 300px;
+  margin-top: -50px;
+  margin-left: 350px;
 }
-
 
 /********************************/
 /*          Section 2           */
+/*     (For Decorate Line)      */
+/********************************/
+
+section.section-2 {
+  min-height: 32.5px;
+}
+
+
+/********************************/
+/*          Section 3           */
 /*        (For Concept)         */
 /********************************/
 
-section.section-2 > .background-wrapper {
-  background-image: url("../imgs/pic/03_cut.png");
+section.section-3 > .background-wrapper {
+  background-image: url("../imgs/black blur/1.jpg");
 }
 
-section.section-2 > .content-wrapper > .header,
-section.section-2 > .content-wrapper > .content {
-  padding-top:1em;
+section.section-3 > .content-wrapper {
   color: white;
 }
 
 /********************************/
-/*          Section 3           */
+/*          Section 4           */
 /*      (For Description)       */
 /********************************/
 
-section.section-color-line{
-  min-height: 253px;
-}
-section.section-color-line > .background-wrapper{
-  background-image: url("../imgs/line/brown_line.png");
-  min-height: 353px;
-}
-
-section.section-3 > .background-wrapper {
+section.section-4 > .background-wrapper {
   background-color: #958A8D;
 }

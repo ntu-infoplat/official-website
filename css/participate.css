@@ -1,36 +1,25 @@
 /**
- *  Index Css
+ *  Participate Css
  */
 
 /********************************/
 /*          Section 1           */
-/*        (For Sliders)         */
 /********************************/
 
 section.section-1 {
-  
 }
 
 section.section-1 > .background-wrapper {
   background-image: url("../imgs/line/04_line.png");
 }
 
-section.section-1 > .content-wrapper > .header {
+section.section-1 > .content-wrapper {
   color: white;
-  font-size: 2em;
-  margin-top: 100px;
-}
-
-section.section-1 > .content-wrapper > .content {
-  color: white;
-  margin-top: -50px;
-  margin-left: 300px;
 }
 
 
 /********************************/
 /*          Section 2           */
-/*        (For Concept)         */
 /********************************/
 
 section.section-2 > .background-wrapper {
@@ -75,6 +64,3 @@ section.section-2 > .content-wrapper > .content > .article > .content-block{
 section.section-2 > .content-wrapper > .content > .article > .content-block img{
 	width: 100%;
 }
-
-
-

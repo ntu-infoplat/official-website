@@ -8,15 +8,64 @@
 /********************************/
 
 
+/**
+ *  Background Image
+ */
 section.section-1 > .background-wrapper {
   background-image: url("../imgs/pic/index_01.png");
 }
 
-section.section-1 > .content-wrapper > .content {
-  color: white;
-  margin-top: -50px;
-  margin-left: 350px;
+/**
+ *  Components:
+ *    .btn-back
+ *    .btn-next
+ *    .btn-control
+ */
+section.section-1 > .background-wrapper > .btn-back,
+section.section-1 > .background-wrapper > .btn-next {
+  bottom: 80px;
 }
+
+section.section-1 > .background-wrapper > .btn-back > img,
+section.section-1 > .background-wrapper > .btn-next > img {
+  width: 36px;
+}
+
+section.section-1 > .background-wrapper > .btn-back > img,
+section.section-1 > .background-wrapper > .btn-next > img,
+section.section-1 > .background-wrapper > .btn-control > div.circle {
+  cursor: pointer;
+}
+
+/* btn-back */
+section.section-1 > .background-wrapper > .btn-back {
+  right: 128px;
+}
+
+/* btn-next */
+section.section-1 > .background-wrapper > .btn-next {
+  right: 56px;
+}
+
+/* btn-control */
+section.section-1 > .background-wrapper > .btn-control {
+  text-align: center;
+  right: 6px;
+  bottom: 40px;
+}
+
+section.section-1 > .background-wrapper > .btn-control > div.circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  background-color: gray;
+}
+
+section.section-1 > .background-wrapper > .btn-control > div.circle.active {
+  background-color: white;
+}
+
 
 /********************************/
 /*          Section 2           */
@@ -25,4 +74,17 @@ section.section-1 > .content-wrapper > .content {
 
 section.section-2 > .background-wrapper {
   background-image: url("../imgs/pic/index_02.png");
+}
+
+section.section-2 > .background-wrapper > .btn-up {
+  right: 25px;
+  bottom: 120px;
+}
+
+section.section-2 > .background-wrapper > .btn-up > img {
+  width: 60px;
+}
+
+section.section-2 > .content-wrapper > .header {
+  color: rgba(37, 13, 6, 1);
 }

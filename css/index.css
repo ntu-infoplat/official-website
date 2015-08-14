@@ -7,12 +7,9 @@
 /*        (For Sliders)         */
 /********************************/
 
-section.section-1 {
-  margin-bottom: 150px;
-}
 
 section.section-1 > .background-wrapper {
-  background-image: url("../imgs/pic/02.jpg");
+  background-image: url("../imgs/pic/index_01.png");
 }
 
 section.section-1 > .content-wrapper > .content {
@@ -26,29 +23,6 @@ section.section-1 > .content-wrapper > .content {
 /*     (For Decorate Line)      */
 /********************************/
 
-section.section-2 {
-  min-height: 32.5px;
-}
-
-
-/********************************/
-/*          Section 3           */
-/*        (For Concept)         */
-/********************************/
-
-section.section-3 > .background-wrapper {
-  background-image: url("../imgs/black blur/1.jpg");
-}
-
-section.section-3 > .content-wrapper {
-  color: white;
-}
-
-/********************************/
-/*          Section 4           */
-/*      (For Description)       */
-/********************************/
-
-section.section-4 > .background-wrapper {
-  background-color: #958A8D;
+section.section-2 > .background-wrapper {
+  background-image: url("../imgs/pic/index_02.png");
 }

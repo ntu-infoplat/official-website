@@ -30,7 +30,7 @@ var NavBar = React.createClass({
     return (
       <div className="content-wrapper">
         <div className="header">
-          <img src="./imgs/icon/logo.svg"/>
+          <img src="./imgs/icon/logo_shadow.svg"/>
         </div>
         <div className="content">
           <ul>{linkNode}</ul>

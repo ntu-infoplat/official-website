@@ -1,8 +1,8 @@
 [
-  {"title": "首頁", "url": "index.html"},
   {"title": "主題觀點", "url": "blog.html"},
   {"title": "資訊彙整", "url": "information.html"},
   {"title": "應用開發", "url": "applications.html"},
+  {"title": "許願池", "url": "wishing-well.html"},
   {"title": "如何參與", "url": "participate.html"},
   {"title": "聯絡我們", "url": "contact.html"}
 ]

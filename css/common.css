@@ -106,7 +106,6 @@ section {
   position: relative;
   width: 100%;
   min-height: 650px;
-  /*margin-top: 100px;*/
   overflow: hidden;
 
   -webkit-transform: skew(0deg, 7.5deg);
@@ -116,15 +115,13 @@ section {
   transform: skew(0deg, 7.5deg);
 }
 
-section > .background-wrapper,
-section > .content-wrapper {
+section > div{
   -webkit-transform: skew(0deg, -7.5deg);
   -moz-transform: skew(0deg, -7.5deg);
   -ms-transform: skew(0deg, -7.5deg);
   -o-transform: skew(0deg, -7.5deg);
   transform: skew(0deg, -7.5deg);
 }
-
 
 /*  For Section Background  */
 
@@ -139,12 +136,14 @@ section > .background-wrapper {
   width: 100%;
   height: 125%;
   margin-top: -81px;
+  /*margin-top: -115px;*/
 }
 
 
 /*  For Section Content  */
 
 section > .content-wrapper {
+  max-width: 885px;
 }
 
 section > .content-wrapper > .header {
@@ -162,6 +161,7 @@ section > .content-wrapper > .content{
 section.top-section {
   min-height: 680px;
   margin-top: -81px;
+  /*margin-top: 200px;*/
 }
 
 section.top-section > .content-wrapper > .header {
@@ -177,12 +177,14 @@ section.bottom-section {
  *  Line Styles
  */
 
-.line {
-  position: absolute;
-  top: 0;
-  left: 0;
+.horizontal-line {
+  position: relative;
   width: 100%;
-  height: 4.5%;
+}
+
+.vertical-line {
+  position: relative;
+  height: 100%;
 }
 
 /* Line Position */
@@ -221,10 +223,11 @@ nav#navbar {
   position: fixed;
   z-index: 50;
   top: 0;
-  left: 30px;
-  width: 180px;
+  left: 50px;
+  width: 190px;
   height: 100%;
   background-color: rgba(51, 126, 121, 0.7);
+  box-shadow: -3.5px 0px 1px rgba(0, 0, 0, 0.4);
 }
 
 nav#navbar .header{
@@ -232,8 +235,9 @@ nav#navbar .header{
 }
 
 nav#navbar .header > img{
-  padding-top: 15px;
-  width: 50%;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  width: 60%;
 }
 
 nav#navbar .content > ul {
@@ -244,8 +248,9 @@ nav#navbar .content > ul > li {
   width: 100%;
   height: 70px;
   font-size: 1.1em;
-  margin: 15px auto;
-  background-color: rgba(49, 125, 121, 0.8);
+  margin: 10px auto;
+  background-color: rgba(51, 126, 121, 0.7);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 nav#navbar .content a {
@@ -279,11 +284,8 @@ div#rightLine {
   position: fixed;
   z-index: 50;
   top: 0;
-  right: 0px;
-  width: 8%;
-  height: 100%;
-  background-color: transparent;
-  border-left: 1px dashed white;
+  right: 0;
+  width: 96px;
 }
 
 
@@ -296,11 +298,6 @@ div#rightLine {
 }
 
 .content {
-  margin: 0 auto;
-}
-
-.content-wrapper {
-  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -352,6 +349,6 @@ div#rightLine {
 
 @media only screen and (max-width: 1240px) {
   section > .content-wrapper {
-    padding-left: 140px;
+    padding-left: 240px;
   }
 }

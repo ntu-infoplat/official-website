@@ -25,7 +25,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
   render: function () {
     var data = this.props.data,
         header = getHeader(data.header),
-        content = getContent(data.content);
+        content = getContent.call(this, data.content);
 
     return (
       React.createElement("div", {className: "content-wrapper"}, 
@@ -42,7 +42,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
 
 function getHeader(header, headerType) {
   if (header === undefined) {
-    return "";
+    return undefined;
   }
 
   var headerType = headerType || "title",
@@ -61,26 +61,19 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h1", null,  contentObject )
-      )
-    )
+    return React.createElement("h1", {className:  cssClass },  contentObject );
   } else if (headerType === "subtitle") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h2", null,  contentObject )
-      )
-    )
+    return React.createElement("h2", {className:  cssClass },  contentObject );
   }
 }
 
 function getContent(content) {
   if (content === undefined) {
-    return "";
+    return undefined;
   }
 
-  var property, type, content, cssClass, description;
+  var self = this,
+      property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
     property = contentUnit.property;
@@ -115,14 +108,22 @@ function getContent(content) {
         contentObject = React.createElement("iframe", {src:  content, frameborder: "0", allowfullscreen: true});
       }
 
+      if (type === 'component') {
+        var Component = this.props.components[content];
+        if (Component) {
+          contentObject = React.createElement(Component, null);
+        } else {
+          contentObject = undefined;
+        }
+      }
+
       return (
         React.createElement("div", {key:  i, className:  cssClass }, 
            contentObject 
         )
       );
     }
-
-  })
+  }.bind(self));
 }
 
 module.exports = ContentBlock;

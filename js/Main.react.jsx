@@ -21,6 +21,7 @@ var Main = React.createClass({
   },
   render: function () {
     var data = this.state.data,
+        components = this.props.components,
         mainSection;
 
     mainSection = data.map(function (section, i) {
@@ -32,7 +33,7 @@ var Main = React.createClass({
       return (
         <section key={ i } id={ sectionId } className={ sectionClass }>
           <BackgroundBlock data={ background }/>
-          <ContentBlock data={ content }/>
+          <ContentBlock data={ content } components={ components }/>
         </section>
       )
     });

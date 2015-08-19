@@ -182,6 +182,10 @@ section > .content-wrapper > .content {
   text-align: center;
 }
 
+section > .content-wrapper > .content > div {
+  margin-bottom: 50px;
+}
+
 
 /* For Top & Bottom Section */
 
@@ -267,7 +271,7 @@ nav#navbar .header{
   text-align: center;
 }
 
-nav#navbar .header > img{
+nav#navbar .header img{
   padding-top: 40px;
   padding-bottom: 15px;
   width: 60%;
@@ -323,6 +327,21 @@ div#rightLine {
   background-color: transparent;
 }
 
+/**
+ * Corner Tag
+ */
+div#cornerTag {
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  right: 0;
+  width: 230px;
+}
+
+div#cornerTag > img {
+  width: 100%;
+}
+
 
 /********************************/
 /*            Shapes            */
@@ -351,6 +370,13 @@ div#rightLine {
 
 .content {
   margin: 0 auto;
+}
+
+.vertical-center {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .horizontal-vertical-center {
@@ -393,6 +419,11 @@ div#rightLine {
 
 .width-75 {
   width: 75%;
+}
+
+/* Font */
+.font-white {
+  color: white;
 }
 
 /********************************/

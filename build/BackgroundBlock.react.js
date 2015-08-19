@@ -56,7 +56,6 @@ var BackgroundBlockStyle = React.createClass({displayName: "BackgroundBlockStyle
       }
     }
 
-    console.log(backgroundColorStyle);
     return (
       React.createElement("div", {className: "background", style:  backgroundColorStyle ? backgroundColorStyle : {}}, 
          backgroundObject 
@@ -99,8 +98,6 @@ var BackgroundBlockComponent = React.createClass({displayName: "BackgroundBlockC
             subComponentContent = React.createElement("div", {key:  i, className:  child.cssClass},  subComponentContent );
             subComponent.push(subComponentContent);
           }
-
-          console.log(subComponent);
           return subComponent
         })
       }

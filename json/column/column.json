@@ -13,7 +13,7 @@
       "header": {
         "type": "text",
         "content": "主題觀點",
-        "cssClass": "",
+        "cssClass": "font-white",
         "description": "主題觀點"
       },
       "content": [
@@ -23,6 +23,43 @@
           "content": "Into Your Campus Life",
           "cssClass": "",
           "description": "Into Your Campus Life"
+        }
+      ]
+    }
+  },
+  {
+    "id": "section-2",
+    "cssClass": "section-2 bottom-section",
+    "background-data": {
+      "background": {
+        "type": "image",
+        "content": "imgs/pic/index_02.png"
+      },
+      "component": [
+        {
+          "type": "image",
+          "content": "imgs/icon/btn_up.svg",
+          "cssClass": "btn-up",
+          "description": "btn-up",
+          "children": []
+        }
+      ]
+    },
+    "content-data": {
+      "content": [
+        {
+          "property": "content",
+          "type": "text",
+          "content": "在偌大的校園裡，你怎麼定位自己？",
+          "cssClass": "",
+          "description": ""
+        },
+        {
+          "property": "content",
+          "type": "component",
+          "content": "ColumnComponent",
+          "cssClass": "",
+          "description": ""
         }
       ]
     }

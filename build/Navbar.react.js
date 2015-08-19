@@ -5,7 +5,6 @@ var Navbar = React.createClass({displayName: "Navbar",
     }
   },
   componentDidMount: function(){
-    console.log(this.state.data);
     $.ajax({
         url: this.props.data,
         dataType: 'json',
@@ -20,17 +19,19 @@ var Navbar = React.createClass({displayName: "Navbar",
   render: function () {
     var linkNode = this.state.data.map(function (link, i) {
       return (
-        React.createElement("li", {key: i}, 
+        React.createElement("li", {key: i},
             React.createElement("a", {className: "horizontal-vertical-center", href: link.url}, link.title)
         )
       )
     });
     return (
-      React.createElement("div", {className: "content-wrapper"}, 
-        React.createElement("div", {className: "header"}, 
-          React.createElement("img", {src: "./imgs/icon/logo_shadow.svg"})
-        ), 
-        React.createElement("div", {className: "content"}, 
+      React.createElement("div", {className: "content-wrapper"},
+        React.createElement("div", {className: "header"},
+          React.createElement("a", {href: "index.html"},
+            React.createElement("img", {src: "./imgs/icon/logo_shadow.svg"})
+          )
+        ),
+        React.createElement("div", {className: "content"},
           React.createElement("ul", null, linkNode)
         )
       )

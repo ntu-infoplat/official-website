@@ -57,7 +57,6 @@ var BackgroundBlockStyle = React.createClass({displayName: "BackgroundBlockStyle
       }
     }
 
-    console.log(backgroundColorStyle);
     return (
       React.createElement("div", {className: "background", style:  backgroundColorStyle ? backgroundColorStyle : {}}, 
          backgroundObject 
@@ -100,8 +99,6 @@ var BackgroundBlockComponent = React.createClass({displayName: "BackgroundBlockC
             subComponentContent = React.createElement("div", {key:  i, className:  child.cssClass},  subComponentContent );
             subComponent.push(subComponentContent);
           }
-
-          console.log(subComponent);
           return subComponent
         })
       }
@@ -152,7 +149,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
   render: function () {
     var data = this.props.data,
         header = getHeader(data.header),
-        content = getContent(data.content);
+        content = getContent.call(this, data.content);
 
     return (
       React.createElement("div", {className: "content-wrapper"}, 
@@ -169,7 +166,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
 
 function getHeader(header, headerType) {
   if (header === undefined) {
-    return "";
+    return undefined;
   }
 
   var headerType = headerType || "title",
@@ -188,26 +185,19 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h1", null,  contentObject )
-      )
-    )
+    return React.createElement("h1", {className:  cssClass },  contentObject );
   } else if (headerType === "subtitle") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h2", null,  contentObject )
-      )
-    )
+    return React.createElement("h2", {className:  cssClass },  contentObject );
   }
 }
 
 function getContent(content) {
   if (content === undefined) {
-    return "";
+    return undefined;
   }
 
-  var property, type, content, cssClass, description;
+  var self = this,
+      property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
     property = contentUnit.property;
@@ -242,14 +232,22 @@ function getContent(content) {
         contentObject = React.createElement("iframe", {src:  content, frameborder: "0", allowfullscreen: true});
       }
 
+      if (type === 'component') {
+        var Component = this.props.components[content];
+        if (Component) {
+          contentObject = React.createElement(Component, null);
+        } else {
+          contentObject = undefined;
+        }
+      }
+
       return (
         React.createElement("div", {key:  i, className:  cssClass }, 
            contentObject 
         )
       );
     }
-
-  })
+  }.bind(self));
 }
 
 module.exports = ContentBlock;
@@ -278,6 +276,7 @@ var Main = React.createClass({displayName: "Main",
   },
   render: function () {
     var data = this.state.data,
+        components = this.props.components,
         mainSection;
 
     mainSection = data.map(function (section, i) {
@@ -289,7 +288,7 @@ var Main = React.createClass({displayName: "Main",
       return (
         React.createElement("section", {key:  i, id:  sectionId, className:  sectionClass }, 
           React.createElement(BackgroundBlock, {data:  background }), 
-          React.createElement(ContentBlock, {data:  content })
+          React.createElement(ContentBlock, {data:  content, components:  components })
         )
       )
     });
@@ -306,8 +305,76 @@ module.exports = Main ;
 
 },{"./BackgroundBlock.react.js":1,"./ContentBlock.react.js":2}],4:[function(require,module,exports){
 var Main = require('../Main.react.js'),
-    mainNode = document.getElementById('main');
+    ColumnComponent = require('./columnComponent.js'),
+    mainNode = document.getElementById('main'),
+    components = { "ColumnComponent": ColumnComponent };
 
-React.render(React.createElement(Main, {data: "json/column/column.json"}), mainNode);
+React.render(React.createElement(Main, {data: "json/column/column.json", components:  components }), mainNode);
 
-},{"../Main.react.js":3}]},{},[4]);
+},{"../Main.react.js":3,"./columnComponent.js":5}],5:[function(require,module,exports){
+var ColumnComponent = React.createClass({displayName: "ColumnComponent",
+  /**
+   *  data: [
+   *    {
+   *      date: String (2015,NOV,13)
+   *      topic: String
+   *      image: String
+   *      content: String
+   *      link: String
+   *    }
+   *    ...
+   *  ]
+   */
+  getInitialState: function () {
+    return {
+      data: []
+    };
+  },
+  componentDidMount: function() {
+    $.ajax({
+        url: "json/column/columnComponent.json",
+        dataType: 'json',
+        success: function(data) {
+          this.setState({ data: data });
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error(this.props.data, status, err.toString());
+        }.bind(this)
+    });
+  },
+  render: function () {
+    var data = this.state.data,
+        columnComponentObject;
+
+    columnComponentObject = data.map(function (column, i) {
+      var date = column.date.split(',');
+      return (
+        React.createElement("div", {className: "column"}, 
+          React.createElement("div", {className: "column-header vertical-center"}, 
+            React.createElement("div", {className: "column-date"}, 
+              React.createElement("div", null,  date[1] + " " + date[0] + " "), 
+              React.createElement("div", null,  date[2] )
+            ), 
+            React.createElement("div", {className: "column-topic"}, 
+              React.createElement("h2", null,  column.topic)
+            )
+          ), 
+          React.createElement("div", {className: "column-content", dangerouslySetInnerHTML: {__html: column.content}}), 
+          React.createElement("div", {className: "column-link"}, 
+            React.createElement("a", {href:  column.link}, "Read More...")
+          )
+        )
+      )
+    })
+
+    return (
+      React.createElement("div", {className: "column-wrapper"}, 
+         columnComponentObject 
+      )
+    )
+  }
+});
+
+module.exports = ColumnComponent ;
+
+},{}]},{},[4]);

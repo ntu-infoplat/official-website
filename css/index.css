@@ -77,13 +77,13 @@ section.section-2 > .background-wrapper {
 }
 
 section.section-2 > .background-wrapper > .component > .btn-up {
-  right: 25px;
-  bottom: 120px;
+  right: 30px;
+  bottom: 80px;
 }
 
 section.section-2 > .background-wrapper > .component > .btn-up > img {
   cursor: pointer;
-  width: 60px;
+  width: 50px;
 }
 
 section.section-2 > .content-wrapper > .header {

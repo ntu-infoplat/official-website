@@ -1,0 +1,58 @@
+
+section.section-2 > .background-wrapper > .component > .btn-up {
+  right: 30px;
+  bottom: 80px;
+}
+
+section.section-2 > .background-wrapper > .component > .btn-up > img {
+  cursor: pointer;
+  width: 50px;
+}
+
+/* For Columns */
+.column-wrapper {
+  position: relative;
+}
+
+.column {
+  background-color: rgba(83, 84, 84, 0.5);
+  text-align: left;
+  padding: 0 20px;
+  width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.column > .column-header > div {
+  display: inline-block;
+  color: white;
+  margin-right: 30px;
+}
+
+.column > .column-header > .column-date > div {
+  width: 100%;
+  text-align: center;
+}
+
+.column > .column-header > .column-date > div:nth-child(2) {
+  font-size: 2em;
+}
+
+.column > .column-header,
+.column > .column-content {
+  border-bottom: 1px solid white;
+}
+
+.column > .column-content {
+  padding: 20px 40px;
+}
+
+.column > .column-link {
+  padding: 10px;
+  float: right;
+}
+
+.column > .column-link > a {
+  color: white;
+  text-decoration: none;
+}

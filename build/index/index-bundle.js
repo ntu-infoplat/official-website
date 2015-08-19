@@ -57,7 +57,6 @@ var BackgroundBlockStyle = React.createClass({displayName: "BackgroundBlockStyle
       }
     }
 
-    console.log(backgroundColorStyle);
     return (
       React.createElement("div", {className: "background", style:  backgroundColorStyle ? backgroundColorStyle : {}}, 
          backgroundObject 
@@ -100,8 +99,6 @@ var BackgroundBlockComponent = React.createClass({displayName: "BackgroundBlockC
             subComponentContent = React.createElement("div", {key:  i, className:  child.cssClass},  subComponentContent );
             subComponent.push(subComponentContent);
           }
-
-          console.log(subComponent);
           return subComponent
         })
       }
@@ -169,7 +166,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
 
 function getHeader(header, headerType) {
   if (header === undefined) {
-    return "";
+    return undefined;
   }
 
   var headerType = headerType || "title",
@@ -188,23 +185,15 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h1", null,  contentObject )
-      )
-    )
+    return React.createElement("h1", {className:  cssClass },  contentObject );
   } else if (headerType === "subtitle") {
-    return (
-      React.createElement("div", {className:  cssClass }, 
-        React.createElement("h2", null,  contentObject )
-      )
-    )
+    return React.createElement("h2", {className:  cssClass },  contentObject );
   }
 }
 
 function getContent(content) {
   if (content === undefined) {
-    return "";
+    return undefined;
   }
 
   var property, type, content, cssClass, description;
@@ -255,26 +244,6 @@ function getContent(content) {
 module.exports = ContentBlock;
 
 },{}],3:[function(require,module,exports){
-var Footer = React.createClass({displayName: "Footer",
-  render: function () {
-    return (
-      React.createElement("div", {className: "width-75"}, 
-        React.createElement("div", {className: "horizontal-vertical-center"}, 
-          React.createElement("span", null, 
-            "InfoPlat  |  ", 
-            React.createElement("a", {rel: "license", href: "https://creativecommons.org/licenses/by-nc-sa/4.0/"}, 
-              "CC-BY-NC-SA 4.0"
-            )
-          )
-        )
-      )
-    );
-  }
-});
-
-module.exports = Footer ;
-
-},{}],4:[function(require,module,exports){
 var ContentBlock = require('./ContentBlock.react.js'),
     BackgroundBlock = require('./BackgroundBlock.react.js');
 
@@ -324,59 +293,10 @@ var Main = React.createClass({displayName: "Main",
 
 module.exports = Main ;
 
-},{"./BackgroundBlock.react.js":1,"./ContentBlock.react.js":2}],5:[function(require,module,exports){
-var Navbar = React.createClass({displayName: "Navbar",
-  getInitialState: function(){
-    return {
-      data: []
-    }
-  },
-  componentDidMount: function(){
-    console.log(this.state.data);
-    $.ajax({
-        url: this.props.data,
-        dataType: 'json',
-        success: function(data){
-          this.setState({data: data});
-        }.bind(this),
-        error: function(xhr, status, err) {
-          console.error(this.props.data, status, err.toString());
-        }.bind(this)
-    })
-  },
-  render: function () {
-    var linkNode = this.state.data.map(function (link, i) {
-      return (
-        React.createElement("li", {key: i}, 
-            React.createElement("a", {className: "horizontal-vertical-center", href: link.url}, link.title)
-        )
-      )
-    });
-    return (
-      React.createElement("div", {className: "content-wrapper"}, 
-        React.createElement("div", {className: "header"}, 
-          React.createElement("img", {src: "./imgs/icon/logo_shadow.svg"})
-        ), 
-        React.createElement("div", {className: "content"}, 
-          React.createElement("ul", null, linkNode)
-        )
-      )
-    );
-  }
-});
-
-module.exports = Navbar ;
-
-},{}],6:[function(require,module,exports){
+},{"./BackgroundBlock.react.js":1,"./ContentBlock.react.js":2}],4:[function(require,module,exports){
 var Main = require('../Main.react.js'),
-    Navbar = require('../Navbar.react.js'),
-    Footer = require('../Footer.react.js'),
-    navbarNode = document.getElementById('navbar'),
-    mainNode = document.getElementById('main'),
-    footerNode = document.getElementById('footer');
+    mainNode = document.getElementById('main');
 
-React.render(React.createElement(Navbar, {data: "json/navbar.json"}), navbarNode);
 React.render(React.createElement(Main, {data: "json/index/index.json"}), mainNode);
-React.render(React.createElement(Footer, null), footerNode);
 
-},{"../Footer.react.js":3,"../Main.react.js":4,"../Navbar.react.js":5}]},{},[6]);
+},{"../Main.react.js":3}]},{},[4]);

@@ -25,7 +25,7 @@ var ContentBlock = React.createClass({
   render: function () {
     var data = this.props.data,
         header = getHeader(data.header),
-        content = getContent(data.content);
+        content = getContent.call(this, data.content);
 
     return (
       <div className="content-wrapper">
@@ -42,7 +42,7 @@ var ContentBlock = React.createClass({
 
 function getHeader(header, headerType) {
   if (header === undefined) {
-    return "";
+    return undefined;
   }
 
   var headerType = headerType || "title",
@@ -61,26 +61,19 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
-    return (
-      <div className={ cssClass }>
-        <h1>{ contentObject }</h1>
-      </div>
-    )
+    return <h1 className={ cssClass }>{ contentObject }</h1>;
   } else if (headerType === "subtitle") {
-    return (
-      <div className={ cssClass }>
-        <h2>{ contentObject }</h2>
-      </div>
-    )
+    return <h2 className={ cssClass }>{ contentObject }</h2>;
   }
 }
 
 function getContent(content) {
   if (content === undefined) {
-    return "";
+    return undefined;
   }
 
-  var property, type, content, cssClass, description;
+  var self = this,
+      property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
     property = contentUnit.property;
@@ -115,14 +108,22 @@ function getContent(content) {
         contentObject = <iframe src={ content } frameborder="0" allowfullscreen></iframe>;
       }
 
+      if (type === 'component') {
+        var Component = this.props.components[content];
+        if (Component) {
+          contentObject = <Component />;
+        } else {
+          contentObject = undefined;
+        }
+      }
+
       return (
         <div key={ i } className={ cssClass }>
           { contentObject }
         </div>
       );
     }
-
-  })
+  }.bind(self));
 }
 
 module.exports = ContentBlock;

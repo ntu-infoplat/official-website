@@ -1,0 +1,30 @@
+[
+  {
+    "id": "section-1",
+    "cssClass": "section-1 top-section",
+    "background-data": {
+      "background": {
+        "type": "image",
+        "content": "imgs/pic/column.png"
+      },
+      "component": []
+    },
+    "content-data": {
+      "header": {
+        "type": "text",
+        "content": "主題觀點",
+        "cssClass": "",
+        "description": "主題觀點"
+      },
+      "content": [
+        {
+          "property": "subtitle",
+          "type": "text",
+          "content": "Into Your Campus Life",
+          "cssClass": "",
+          "description": "Into Your Campus Life"
+        }
+      ]
+    }
+  }
+]

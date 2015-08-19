@@ -1,0 +1,96 @@
+[
+  {
+    "id": "section-1",
+    "cssClass": "section-1 top-section",
+    "background-data": {
+      "background": {
+        "type": "image",
+        "content": "imgs/pic/index_01.png"
+      },
+      "component": [
+        {
+          "type": "image",
+          "content": "imgs/icon/btn_back.svg",
+          "cssClass": "btn-back",
+          "description": "btn-back",
+          "children": []
+        },
+        {
+          "type": "image",
+          "content": "imgs/icon/btn_next.svg",
+          "cssClass": "btn-next",
+          "description": "btn-next",
+          "children": []
+        },
+        {
+          "type": "empty",
+          "content": "",
+          "cssClass": "btn-control",
+          "description": "btn-control",
+          "children": [
+            {
+              "type": "empty",
+              "content": "",
+              "cssClass": "circle",
+              "description": "circle",
+              "repeat": 5
+            }
+          ]
+        }
+      ]
+    },
+    "content-data": {
+      "header": {
+        "type": "image",
+        "content": "imgs/icon/infoplat_txt.svg",
+        "cssClass": "width-50",
+        "description": "InfoPlat"
+      },
+      "content": [
+        {
+          "property": "subtitle",
+          "type": "text",
+          "content": "Into Your Campus Life",
+          "cssClass": "",
+          "description": "Into Your Campus Life"
+        }
+      ]
+    }
+  },
+  {
+    "id": "section-2",
+    "cssClass": "section-2 bottom-section",
+    "background-data": {
+      "background": {
+        "type": "image",
+        "content": "imgs/pic/index_02.png"
+      },
+      "component": [
+        {
+          "type": "image",
+          "content": "imgs/icon/btn_up.svg",
+          "cssClass": "btn-up",
+          "description": "btn-up",
+          "children": []
+        }
+      ]
+    },
+    "content-data": {
+      "header": {
+        "type": "text",
+        "content": "動畫介紹",
+        "cssClass": "",
+        "description": "動畫介紹"
+      },
+      "content": [
+        {
+          "property": "content",
+          "type": "text",
+          "content": "test<br>and",
+          "cssClass": "",
+          "description": ""
+        }
+      ]
+    }
+  }
+]

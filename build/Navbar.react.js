@@ -1,13 +1,11 @@
-
-/**
- *  NavBar
- */
-
-var NavBar = React.createClass({displayName: "NavBar",
+var Navbar = React.createClass({displayName: "Navbar",
   getInitialState: function(){
-    return({data: []})
+    return {
+      data: []
+    }
   },
   componentDidMount: function(){
+    console.log(this.state.data);
     $.ajax({
         url: this.props.data,
         dataType: 'json',
@@ -40,27 +38,4 @@ var NavBar = React.createClass({displayName: "NavBar",
   }
 });
 
-/**
- *  Footer
- */
-
-var Footer = React.createClass({displayName: "Footer",
-  render: function () {
-    return (
-      React.createElement("div", {className: "width-75"}, 
-        React.createElement("div", {className: "horizontal-vertical-center"}, 
-          React.createElement("span", null, 
-            "InfoPlat  |  ", 
-            React.createElement("a", {rel: "license", href: "https://creativecommons.org/licenses/by-nc-sa/4.0/"}, 
-              "CC-BY-NC-SA 4.0"
-            )
-          )
-        )
-      )
-    );
-  }
-});
-
-
-React.render(React.createElement(NavBar, {data: "./json/navbar.json"}), document.getElementById('navbar'));
-React.render(React.createElement(Footer, null), document.getElementById('footer'));
+module.exports = Navbar ;

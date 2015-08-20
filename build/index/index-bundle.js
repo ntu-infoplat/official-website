@@ -149,7 +149,7 @@ var ContentBlock = React.createClass({displayName: "ContentBlock",
   render: function () {
     var data = this.props.data,
         header = getHeader(data.header),
-        content = getContent(data.content);
+        content = getContent.call(this, data.content);
 
     return (
       React.createElement("div", {className: "content-wrapper"}, 
@@ -196,7 +196,8 @@ function getContent(content) {
     return undefined;
   }
 
-  var property, type, content, cssClass, description;
+  var self = this,
+      property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
     property = contentUnit.property;
@@ -231,14 +232,22 @@ function getContent(content) {
         contentObject = React.createElement("iframe", {src:  content, frameborder: "0", allowfullscreen: true});
       }
 
+      if (type === 'component') {
+        var Component = this.props.components[content];
+        if (Component) {
+          contentObject = React.createElement(Component, null);
+        } else {
+          contentObject = undefined;
+        }
+      }
+
       return (
         React.createElement("div", {key:  i, className:  cssClass }, 
            contentObject 
         )
       );
     }
-
-  })
+  }.bind(self));
 }
 
 module.exports = ContentBlock;
@@ -267,6 +276,7 @@ var Main = React.createClass({displayName: "Main",
   },
   render: function () {
     var data = this.state.data,
+        components = this.props.components,
         mainSection;
 
     mainSection = data.map(function (section, i) {
@@ -278,7 +288,7 @@ var Main = React.createClass({displayName: "Main",
       return (
         React.createElement("section", {key:  i, id:  sectionId, className:  sectionClass }, 
           React.createElement(BackgroundBlock, {data:  background }), 
-          React.createElement(ContentBlock, {data:  content })
+          React.createElement(ContentBlock, {data:  content, components:  components })
         )
       )
     });

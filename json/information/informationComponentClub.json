@@ -1,0 +1,12 @@
+[
+  {
+    "background": {
+      "type": "image",
+      "content": "imgs/pic/information.png"
+    },
+    "content": {
+      "header": "吉他社",
+      "content": "2015/08/01"
+    }
+  }
+]

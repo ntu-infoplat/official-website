@@ -24,7 +24,7 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
           this.setState({ data: data });
         }.bind(this),
         error: function(xhr, status, err) {
-          console.error(this.props.data, status, err.toString());
+          console.error(status, err.toString());
         }.bind(this)
     });
   },
@@ -45,7 +45,10 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
               React.createElement("h2", null,  column.topic)
             )
           ), 
-          React.createElement("div", {className: "column-content", dangerouslySetInnerHTML: {__html: column.content}}), 
+          React.createElement("div", {className: "column-content"}, 
+            React.createElement("img", {src:  column.image}), 
+            React.createElement("p", {dangerouslySetInnerHTML: {__html: column.content}})
+          ), 
           React.createElement("div", {className: "column-link"}, 
             React.createElement("a", {href:  column.link}, "Read More...")
           )

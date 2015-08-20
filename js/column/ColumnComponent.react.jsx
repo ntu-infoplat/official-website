@@ -24,7 +24,7 @@ var ColumnComponent = React.createClass({
           this.setState({ data: data });
         }.bind(this),
         error: function(xhr, status, err) {
-          console.error(this.props.data, status, err.toString());
+          console.error(status, err.toString());
         }.bind(this)
     });
   },
@@ -45,7 +45,10 @@ var ColumnComponent = React.createClass({
               <h2>{ column.topic }</h2>
             </div>
           </div>
-          <div className="column-content" dangerouslySetInnerHTML={{__html: column.content}}></div>
+          <div className="column-content">
+            <img src={ column.image } />
+            <p dangerouslySetInnerHTML={{__html: column.content}}></p>
+          </div>
           <div className="column-link">
             <a href={ column.link }>Read More...</a>
           </div>

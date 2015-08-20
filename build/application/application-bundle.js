@@ -305,14 +305,14 @@ module.exports = Main ;
 
 },{"./BackgroundBlock.react.js":1,"./ContentBlock.react.js":2}],4:[function(require,module,exports){
 var Main = require('../Main.react.js'),
-    ColumnComponent = require('./ColumnComponent.react.js'),
+    ApplicationComponent = require('./ApplicationComponent.react.js'),
     mainNode = document.getElementById('main'),
-    components = { "ColumnComponent": ColumnComponent };
+    components = { "ApplicationComponent": ApplicationComponent };
 
-React.render(React.createElement(Main, {data: "json/column/column.json", components:  components }), mainNode);
+React.render(React.createElement(Main, {data: "json/application/application.json", components:  components }), mainNode);
 
-},{"../Main.react.js":3,"./ColumnComponent.react.js":5}],5:[function(require,module,exports){
-var ColumnComponent = React.createClass({displayName: "ColumnComponent",
+},{"../Main.react.js":3,"./ApplicationComponent.react.js":5}],5:[function(require,module,exports){
+var ApplicationComponent = React.createClass({displayName: "ApplicationComponent",
   /**
    *  data: [
    *    {
@@ -320,7 +320,6 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
    *      topic: String
    *      image: String
    *      content: String
-   *      link: String
    *    }
    *    ...
    *  ]
@@ -332,7 +331,7 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
   },
   componentDidMount: function() {
     $.ajax({
-        url: "json/column/columnComponent.json",
+        url: "json/application/applicationComponent.json",
         dataType: 'json',
         success: function(data) {
           this.setState({ data: data });
@@ -344,40 +343,34 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
   },
   render: function () {
     var data = this.state.data,
-        columnComponentObject;
+        applicationComponentObject;
 
-    columnComponentObject = data.map(function (column, i) {
-      var date = column.date.split(',');
+    applicationComponentObject = data.map(function (application, i) {
+      var date = application.date.split(',');
       return (
-        React.createElement("div", {className: "column"}, 
-          React.createElement("div", {className: "column-header vertical-center"}, 
-            React.createElement("div", {className: "column-date"}, 
+        React.createElement("div", {className: "application"}, 
+          React.createElement("div", {className: "application-header vertical-center"}, 
+            React.createElement("div", {className: "application-date"}, 
               React.createElement("div", null,  date[1] + " " + date[0] + " "), 
               React.createElement("div", null,  date[2] )
             ), 
-            React.createElement("div", {className: "column-topic"}, 
-              React.createElement("h2", null,  column.topic)
+            React.createElement("div", {className: "application-topic"}, 
+              React.createElement("h2", null,  application.topic)
             )
           ), 
-          React.createElement("div", {className: "column-content"}, 
-            React.createElement("img", {src:  column.image}), 
-            React.createElement("p", {dangerouslySetInnerHTML: {__html: column.content}})
-          ), 
-          React.createElement("div", {className: "column-link"}, 
-            React.createElement("a", {href:  column.link}, "Read More...")
-          )
+          React.createElement("div", {className: "application-content", dangerouslySetInnerHTML: {__html: application.content}})
         )
       )
     })
 
     return (
-      React.createElement("div", {className: "column-wrapper"}, 
-         columnComponentObject 
+      React.createElement("div", {className: "application-wrapper"}, 
+         applicationComponentObject 
       )
     )
   }
 });
 
-module.exports = ColumnComponent ;
+module.exports = ApplicationComponent ;
 
 },{}]},{},[4]);

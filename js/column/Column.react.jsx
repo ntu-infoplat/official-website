@@ -1,5 +1,5 @@
 var Main = require('../Main.react.js'),
-    ColumnComponent = require('./columnComponent.js'),
+    ColumnComponent = require('./ColumnComponent.react.js'),
     mainNode = document.getElementById('main'),
     components = { "ColumnComponent": ColumnComponent };
 

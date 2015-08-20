@@ -1,60 +1,96 @@
+
+section.section-2 > .background-wrapper > .component > .btn-up {
+  right: 30px;
+  bottom: 80px;
+}
+
+section.section-2 > .background-wrapper > .component > .btn-up > img {
+  cursor: pointer;
+  width: 50px;
+}
+
+/* For Information Component */
+
+.information-header {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: rgba(51, 126, 121, 1);
+  border-bottom: 3px solid rgba(51, 126, 121, 1);
+}
+
 /**
- *  Information Css
+ *  For Information Club
  */
 
-/********************************/
-/*          Section 1           */
-/********************************/
-
-section.section-1 {
-}
-
-section.section-1 > .background-wrapper {
-  background-image: url("../imgs/line/02_line.png");
-}
-
-section.section-1 > .content-wrapper{
+.information-club-wrapper {
   color: white;
 }
 
-
-/********************************/
-/*          Section 2           */
-/********************************/
-
-section.section-2 > .background-wrapper {
-  background-image: url("../imgs/pic/07_cut.png");
+.information-club {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  margin: 0 auto;
 }
 
-section.section-2 > .content-wrapper {
-  color: black;
+.information-club > .information-club-background-wrapper {
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
-section.section-2 > .content-wrapper > .content > div {
-  text-align: left;
+.information-club > .information-club-content-wrapper {
+  background-color: rgba(95, 81, 79, 0.5);
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-/********************************/
-/*          Section 3           */
-/********************************/
+.information-club > .information-club-content-wrapper > .information-club-content {
+  width: 85%;
+  padding: 20px 0px;
+  border: 1px solid white;
+}
 
-section.section-3{
-}
-section.section-3 > .background-wrapper {
-  background-color: #a9a9a9;
-}
-section.section-3 > .content-wrapper > .content > .article{
+/**
+ *  For Information New
+ */
+.information-new-wrapper {
   color: white;
 }
-section.section-3 > .content-wrapper > .content > .article > .title-block{
-  text-align: left;
-  font-size: 1.5em;
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-  margin-bottom: 10px;
+
+.information-new {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 500px;
+  padding: 20px 20px;
+  background-color: rgba(92, 92, 92, 0.5);
 }
-section.section-3 > .content-wrapper > .content > .article > .content-block{
-  padding: 50px;
-  margin-bottom: 50px;
-  background-color: #8f8989;
+
+.information-new > .information-new-header,
+.information-new > .information-new-content {
+  display: inline-block;
+}
+
+.information-new > .information-new-header {
+  overflow-x: visible;
   text-align: left;
+  width: 35%;
+}
+
+.information-new > .information-new-content {
+  width: 65%
+}
+
+.information-new > .information-new-content > a {
+  color: inherit;
+  text-decoration: none;
 }

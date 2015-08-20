@@ -61,6 +61,7 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
+    console.log(cssClass);
     return React.createElement("h1", {className:  cssClass },  contentObject );
   } else if (headerType === "subtitle") {
     return React.createElement("h2", {className:  cssClass },  contentObject );
@@ -76,6 +77,7 @@ function getContent(content) {
       property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
+    console.log(contentUnit);
     property = contentUnit.property;
     type = contentUnit.type;
     content = contentUnit.content;
@@ -89,6 +91,7 @@ function getContent(content) {
       var header = {
         type: type,
         content: content,
+        cssClass: cssClass,
         description: description
       }
 

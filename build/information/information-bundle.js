@@ -185,6 +185,7 @@ function getHeader(header, headerType) {
   }
 
   if (headerType === "title") {
+    console.log(cssClass);
     return React.createElement("h1", {className:  cssClass },  contentObject );
   } else if (headerType === "subtitle") {
     return React.createElement("h2", {className:  cssClass },  contentObject );
@@ -200,6 +201,7 @@ function getContent(content) {
       property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
+    console.log(contentUnit);
     property = contentUnit.property;
     type = contentUnit.type;
     content = contentUnit.content;
@@ -213,6 +215,7 @@ function getContent(content) {
       var header = {
         type: type,
         content: content,
+        cssClass: cssClass,
         description: description
       }
 
@@ -305,22 +308,28 @@ module.exports = Main ;
 
 },{"./BackgroundBlock.react.js":1,"./ContentBlock.react.js":2}],4:[function(require,module,exports){
 var Main = require('../Main.react.js'),
-    ColumnComponent = require('./ColumnComponent.react.js'),
-    mainNode = document.getElementById('main'),
-    components = { "ColumnComponent": ColumnComponent };
+    InformationComponent = require('./InformationComponent.react.js'),
+    mainNode = document.getElementById('main');
+    components = {
+      "InformationComponentClub": InformationComponent.InformationComponentClub,
+      "InformationComponentNew": InformationComponent.InformationComponentNew
+    };
 
-React.render(React.createElement(Main, {data: "json/column/column.json", components:  components }), mainNode);
+React.render(React.createElement(Main, {data: "json/information/information.json", components:  components }), mainNode);
 
-},{"../Main.react.js":3,"./ColumnComponent.react.js":5}],5:[function(require,module,exports){
-var ColumnComponent = React.createClass({displayName: "ColumnComponent",
+},{"../Main.react.js":3,"./InformationComponent.react.js":5}],5:[function(require,module,exports){
+var InformationComponentClub = React.createClass({displayName: "InformationComponentClub",
   /**
    *  data: [
    *    {
-   *      date: String (2015,NOV,13)
-   *      topic: String
-   *      image: String
-   *      content: String
-   *      link: String
+   *      background: {
+   *        type: String ('image')
+   *        content: Array[String] (image src / color) ['src': 'url']
+   *      },
+   *      content: {
+   *        header: String
+   *        content: String
+   *      }
    *    }
    *    ...
    *  ]
@@ -332,7 +341,7 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
   },
   componentDidMount: function() {
     $.ajax({
-        url: "json/column/columnComponent.json",
+        url: "json/information/informationComponentClub.json",
         dataType: 'json',
         success: function(data) {
           this.setState({ data: data });
@@ -344,40 +353,96 @@ var ColumnComponent = React.createClass({displayName: "ColumnComponent",
   },
   render: function () {
     var data = this.state.data,
-        columnComponentObject;
+        informationClubBackground,
+        informationClubContent,
+        informationComponentClubObject;
 
-    columnComponentObject = data.map(function (column, i) {
-      var date = column.date.split(',');
+    informationComponentClubObject = data.map(function (informationClub, i) {
+      informationClubBackground = informationClub.background;
+      informationClubContent = informationClub.content;
+      var informationClubBackgroundStyle = {
+        "backgroundImage": "url(" + informationClubBackground.content + ")"
+      };
       return (
-        React.createElement("div", {className: "column"}, 
-          React.createElement("div", {className: "column-header vertical-center"}, 
-            React.createElement("div", {className: "column-date"}, 
-              React.createElement("div", null,  date[1] + " " + date[0] + " "), 
-              React.createElement("div", null,  date[2] )
-            ), 
-            React.createElement("div", {className: "column-topic"}, 
-              React.createElement("h2", null,  column.topic)
+        React.createElement("div", {className: "information-club"}, 
+          React.createElement("div", {className: "information-club-background-wrapper", style:  informationClubBackgroundStyle }), 
+          React.createElement("div", {className: "information-club-content-wrapper horizontal-vertical-center"}, 
+            React.createElement("div", {className: "information-club-content"}, 
+              React.createElement("div", {className: "information-club-topic"}, 
+                React.createElement("h2", null,  informationClubContent.header)
+              ), 
+              React.createElement("div", {className: "information-club-description"}, 
+                 informationClubContent.content
+              )
             )
-          ), 
-          React.createElement("div", {className: "column-content"}, 
-            React.createElement("img", {src:  column.image}), 
-            React.createElement("p", {dangerouslySetInnerHTML: {__html: column.content}})
-          ), 
-          React.createElement("div", {className: "column-link"}, 
-            React.createElement("a", {href:  column.link}, "Read More...")
           )
         )
       )
     })
 
     return (
-      React.createElement("div", {className: "column-wrapper"}, 
-         columnComponentObject 
+      React.createElement("div", {className: "information-club-wrapper"}, 
+         informationComponentClubObject 
       )
     )
   }
 });
 
-module.exports = ColumnComponent ;
+var InformationComponentNew = React.createClass({displayName: "InformationComponentNew",
+  /**
+   *  data: [
+   *    {
+   *      header: String
+   *      content: String
+   *    }
+   *    ...
+   *  ]
+   */
+  getInitialState: function () {
+    return {
+      data: []
+    };
+  },
+  componentDidMount: function() {
+    $.ajax({
+        url: "json/information/informationComponentNew.json",
+        dataType: 'json',
+        success: function(data) {
+          this.setState({ data: data });
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error(status, err.toString());
+        }.bind(this)
+    });
+  },
+  render: function () {
+    var data = this.state.data,
+        informationComponentNewObject;
+
+    informationComponentNewObject = data.map(function (informationNew, i) {
+      return (
+        React.createElement("div", {className: "information-new vertical-center"}, 
+          React.createElement("div", {className: "information-new-header"}, 
+             informationNew.header
+          ), 
+          React.createElement("div", {className: "information-new-content"}, 
+            React.createElement("a", {href:  informationNew.content},  informationNew.content)
+          )
+        )
+      )
+    })
+
+    return (
+      React.createElement("div", {className: "information-new-wrapper"}, 
+         informationComponentNewObject 
+      )
+    )
+  }
+});
+
+module.exports = {
+  "InformationComponentClub": InformationComponentClub,
+  "InformationComponentNew": InformationComponentNew
+};
 
 },{}]},{},[4]);

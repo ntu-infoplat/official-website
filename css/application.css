@@ -9,51 +9,52 @@ section.section-2 > .background-wrapper > .component > .btn-up > img {
   width: 50px;
 }
 
-/* For Columns */
-.column-wrapper {
+/* For applications */
+.application-wrapper {
   position: relative;
 }
 
-.column {
-  background-color: rgba(83, 84, 84, 0.5);
+.application {
+  background-color: rgba(53, 130, 126, 0.5);
   text-align: left;
   padding: 0 20px;
   width: 500px;
-  margin: 0 auto;
+  margin: 40px auto;
   overflow: hidden;
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
-.column > .column-header > div {
+.application > .application-header > div {
   display: inline-block;
   color: white;
   margin-right: 30px;
 }
 
-.column > .column-header > .column-date > div {
+.application > .application-header > .application-date > div {
   width: 100%;
   text-align: center;
 }
 
-.column > .column-header > .column-date > div:nth-child(2) {
+.application > .application-header > .application-date > div:nth-child(2) {
   font-size: 2em;
 }
 
-.column > .column-header,
-.column > .column-content {
+.application > .application-header,
+.application > .application-content {
   border-bottom: 1px solid white;
 }
 
-.column > .column-content {
+.application > .application-content {
   padding: 20px 40px;
+  margin-bottom: 40px;
 }
 
-.column > .column-link {
+.application > .application-link {
   padding: 10px;
   float: right;
 }
 
-.column > .column-link > a {
+.application > .application-link > a {
   color: white;
   text-decoration: none;
 }

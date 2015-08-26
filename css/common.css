@@ -10,9 +10,9 @@ html, body {
   font-size: 18px;
   letter-spacing: 0.05em;
   line-height: 1.42857143;
+  font-family: 'Arial';
   padding: 0em;
   margin: 0em;
-  overflow-y: hidden;
 }
 
 p {
@@ -73,10 +73,10 @@ ul {
 /**
  *  Website Framework
  *    @ section:
- *      { min-height: 650px, skew: (0deg, 5deg) }
+ *      { min-height: 535px, skew: (0deg, 5deg) }
  *
  *      > .background-wrapper
- *         { width: 100%, height: 116.6%, margin-top: -54px }
+ *         { width: 100%, top: -54px, left: 0 }
  *
  *      > .background-wrapper,
  *      > .content-wrapper
@@ -99,13 +99,13 @@ ul {
 
 div.main {
   position: relative;
-  width: 100%;
+  overflow-y: hidden;
 }
 
 section {
   position: relative;
   width: 100%;
-  min-height: 650px;
+  min-height: 535px;
   overflow: hidden;
 
   -webkit-transform: skew(0deg, 5deg);
@@ -128,13 +128,10 @@ section > .content-wrapper {
 
 section > .background-wrapper {
   position: absolute;
+  top: -54px;
+  left: 0;
   width: 100%;
   height: 100%;
-}
-
-section > .background-wrapper > div,
-section > .background-wrapper > .component > div {
-  position: absolute;
 }
 
 section > .background-wrapper > .background {
@@ -142,58 +139,54 @@ section > .background-wrapper > .background {
   z-index: -999;
   top: 0;
   left: 0;
-  background-size: cover;   /*  For RWD, this feature needs to be set to 'contain'  */
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 100%;
-  width: auto;
-  height: 116.6%;
-  margin-top: -54px;
+  width: 100%;
 }
 
 section > .background-wrapper > .background > img {
-  min-width: 100%;
-  width: auto;
-  height: 100%
+  width: 100%;
 }
 
 section > .background-wrapper > .component {
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+section > .background-wrapper > .component > div {
+  position: absolute;
 }
 
 /*  For Section Content  */
 
 section > .content-wrapper {
-  max-width: 884px;
+  width: 884px;
 }
 
 section > .content-wrapper > .header {
-  margin-top: 100px;
-  /*margin: 100px 0px;*/
-}
-
-section > .content-wrapper > .header img {
-  width: 100%;
+  margin-top: 75px;
 }
 
 section > .content-wrapper > .header,
 section > .content-wrapper > .content {
+  position: relative;
   text-align: center;
-}
-
-section > .content-wrapper > .content > div {
-  margin-bottom: 50px;
 }
 
 
 /* For Top & Bottom Section */
 
+/**
+ *  Top Section
+ */
+
 section.top-section {
-  /*min-height: 680px*/
+  min-height: 589px; /* 535 + 54 */
   margin-top: -54px;
+}
+
+section.top-section > .background-wrapper,
+section.top-section > .background-wrapper > .background > img {
+  padding-top: 108px;
 }
 
 section.top-section > .content-wrapper > .header {
@@ -202,16 +195,18 @@ section.top-section > .content-wrapper > .header {
 
 section.top-section > .content-wrapper > .content {
   color: white;
-  margin-top: -20px;
   margin-left: 400px;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
+  font-size: 1.3em;
 }
 
+/**
+ *  Bottom Section
+ */
 section.bottom-section {
   padding-bottom: 54px;
   margin-bottom: -54px;
 }
-
 
 /**
  *  Line Styles
@@ -300,7 +295,6 @@ nav#navbar .content a {
   text-decoration: none;
 }
 
-
 /**
  *  Footer Styles
  */
@@ -325,8 +319,7 @@ div#rightLine {
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 109px;
-  width: 1px;
+  right: 8.5%;
   background-color: transparent;
 }
 
@@ -338,30 +331,20 @@ div#cornerTag {
   z-index: 1;
   top: 20px;
   right: 0;
-  width: 230px;
+  width: 18%;
 }
 
 div#cornerTag > img {
   width: 100%;
 }
 
-
 /********************************/
-/*            Shapes            */
+/*          Components          */
 /********************************/
 
-.circle {
-  border-radius: 50%;
+.btn-back, .btn-next, .btn-control > .circle {
+  cursor: pointer;
 }
-
-.left-top-triangle {
-
-}
-
-.right-bottom-triangle {
-
-}
-
 
 /********************************/
 /*        Global Classes        */
@@ -435,6 +418,6 @@ div#cornerTag > img {
 
 @media only screen and (max-width: 1240px) {
   section > .content-wrapper {
-    padding-left: 240px;
+    margin-left: 240px;
   }
 }

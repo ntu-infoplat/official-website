@@ -1,14 +1,4 @@
 
-section.section-2 > .background-wrapper > .component > .btn-up {
-  right: 30px;
-  bottom: 80px;
-}
-
-section.section-2 > .background-wrapper > .component > .btn-up > img {
-  cursor: pointer;
-  width: 50px;
-}
-
 /* For applications */
 .application-wrapper {
   position: relative;

@@ -77,7 +77,6 @@ function getContent(content) {
       property, type, content, cssClass, description;
 
   return content.map(function (contentUnit, i) {
-    console.log(contentUnit);
     property = contentUnit.property;
     type = contentUnit.type;
     content = contentUnit.content;

@@ -9,52 +9,45 @@
 
 
 /**
- *  Background Image
- */
-section.section-1 > .background-wrapper {
-  /*background-image: url("../imgs/pic/index_01.png");*/
-}
-
-/**
  *  Components:
  *    .btn-back
  *    .btn-next
  *    .btn-control
  */
-section.section-1 > .background-wrapper > .component > .btn-back,
-section.section-1 > .background-wrapper > .component > .btn-next {
-  bottom: 80px;
+
+.btn-back,
+.btn-next,
+.btn-control {
+  position: absolute;
 }
 
-section.section-1 > .background-wrapper > .component > .btn-back > img,
-section.section-1 > .background-wrapper > .component > .btn-next > img {
-  width: 36px;
+.btn-back,
+.btn-next {
+  width: 30px;
+  height: 30px;
+  bottom: 200px;
 }
 
-section.section-1 > .background-wrapper > .component > .btn-back > img,
-section.section-1 > .background-wrapper > .component > .btn-next > img,
-section.section-1 > .background-wrapper > .component > .btn-control > div.circle {
-  cursor: pointer;
+.btn-back {
+  right: 20px;
 }
 
-/* btn-back */
-section.section-1 > .background-wrapper > .component > .btn-back {
-  right: 128px;
+.btn-next {
+  right: -47px;
 }
 
-/* btn-next */
-section.section-1 > .background-wrapper > .component > .btn-next {
-  right: 56px;
+.btn-back > img,
+.btn-next > img {
+  width: 100%;
 }
 
-/* btn-control */
-section.section-1 > .background-wrapper > .component > .btn-control {
-  text-align: center;
-  right: 16px;
-  bottom: 40px;
+.btn-control {
+  width: 100px;
+  left: 5px;
+  bottom: 150px;
 }
 
-section.section-1 > .background-wrapper > .component > .btn-control > div.circle {
+.btn-control > .circle {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -62,30 +55,66 @@ section.section-1 > .background-wrapper > .component > .btn-control > div.circle
   background-color: gray;
 }
 
-section.section-1 > .background-wrapper > .component > .btn-control > div.circle.active {
+.circle.active {
   background-color: white;
+}
+
+/**
+ *  Content
+ */
+section.section-1 > .content-wrapper > .header img {
+  width: 60%;
 }
 
 
 /********************************/
 /*          Section 2           */
-/*     (For Decorate Line)      */
+/*     (For Introduction)       */
 /********************************/
 
-section.section-2 > .background-wrapper {
-  background-image: url("../imgs/pic/index_02.png");
-}
-
-section.section-2 > .background-wrapper > .component > .btn-up {
-  right: 30px;
-  bottom: 80px;
-}
-
-section.section-2 > .background-wrapper > .component > .btn-up > img {
-  cursor: pointer;
-  width: 50px;
+section.section-2 > .content-wrapper {
+  font-family: '微軟正黑體';
 }
 
 section.section-2 > .content-wrapper > .header {
   color: rgba(37, 13, 6, 1);
+}
+
+section.section-2 > .content-wrapper > .content {
+  padding: 0 25%;
+  color: #471A0C;
+}
+
+
+
+/********************************/
+/*         Components           */
+/********************************/
+
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle-top-left,
+.triangle-bottom-right {
+  position: absolute;
+}
+
+.triangle-top-left {
+  top: 0;
+  left: 60px;
+	width: 0;
+	height: 0;
+	border-top: 75px solid white;
+	border-right: 75px solid transparent !important;
+}
+
+.triangle-bottom-right {
+  bottom: 0;
+  right: 60px;
+	width: 0;
+	height: 0;
+	border-bottom: 75px solid white;
+	border-left: 75px solid transparent;
 }

@@ -6,18 +6,79 @@
     <link rel="stylesheet" href="css/common.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="css/index.css" media="screen" charset="utf-8">
   </head>
+
   <body>
+
     <nav id="navbar"></nav>
-    <div id="rightLine" class="vertical-line line-left line-white"></div>
+
     <div id="cornerTag">
       <img src="imgs/icon/scroll_column-17.svg" alt="" />
     </div>
-    <div id="main"></div>
+    <div class="main">
+      <section class="section-1 top-section">
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/index_01.png" alt="" />
+          </div>
+          <div class="component">
+            <div id="rightLine" class="vertical-line line-left line-white">
+              <div class="btn-back">
+                <img src="imgs/icon/btn_back.svg" alt="" />
+              </div>
+              <div class="btn-next">
+                <img src="imgs/icon/btn_next.svg" alt="" />
+              </div>
+              <div class="btn-control">
+                <div class="circle active"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="header">
+            <img src="imgs/icon/infoplat_txt.svg" alt="" />
+          </div>
+          <div class="content">
+            <p>Into Your Campus Life</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-2 bottom-section">
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/index_02.png" alt="" />
+          </div>
+          <div class="component">
+            <div id="rightLine" class="vertical-line line-left line-white"></div>
+          </div>
+        </div>
+        <div class="content-wrapper">
+          <div class="header">
+            <h1>動畫介紹</h1>
+          </div>
+          <div class="content">
+            <div class="triangle-top-left"></div>
+            <p>從一顆種子養育成一棵樹需要多少時間？<br>從開闢新地到建立社區要花費多少汗水？</p>
+            <p>InfoPlat 的核心價值，就是透過營造 hacker-friendly 的開發環境，讓大學生沒有完成不了的專案。</p>
+            <br>
+            <p>你想要的校園資訊，我們一起開發、一同推廣！<br>你想要的校園面貌，讓你親身參與、自己打造！</p>
+            <div class="triangle-bottom-right"></div>
+          </div>
+        </div>
+      </section>
+    </div>
     <footer id="footer"></footer>
+
   </body>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="js/libs/react.js"></script>
+
+  <script type="text/javascript" src="js/libs/react.min.js"></script>
+  <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/tuneScreen.js"></script>
   <script type="text/javascript" src="build/common-bundle.js"></script>
-  <script type="text/javascript" src="build/index/index-bundle.js"></script>
 
 </html>

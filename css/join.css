@@ -1,0 +1,26 @@
+/**
+ *  Join Component
+ */
+
+.join-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: rgba(51, 126, 121, 0.35);
+}
+
+.join-wrapper > h1 {
+  color: rgba(95, 81, 79, 1);
+}
+
+.join-block-wrapper {
+}
+
+.join-block-wrapper > .join-content-wrapper > .join-header,
+.join-block-wrapper > .join-content-wrapper > .join-content {
+  text-align: left;
+}
+
+.join-block-wrapper > .join-content-wrapper > .join-content {
+  display: none;
+}

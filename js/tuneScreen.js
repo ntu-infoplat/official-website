@@ -3,7 +3,7 @@
       deviceWidth,
       topSection = $('section.top-section'),
       sectionBackgroundImage = $('section:first-of-type > .background-wrapper > .background > img');
-      contentWrapper = $('section > .content-wrapper'),
+      contentWrapper = $('.main > .content-wrapper, section > .content-wrapper'),
       navbarWidth = $('nav').width() + 50;
 
   console.log(sectionBackgroundImage.height());
@@ -15,5 +15,7 @@
     topSection.css('min-height', sectionBackgroundImage.height() * SECTIONRATIO);
   };
 
-  window.onresize();
+  $(document).ready(function () {
+    window.onresize();
+  });
 }());

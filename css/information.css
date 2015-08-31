@@ -1,19 +1,126 @@
 
+/**
+ *  For information
+ */
+
+/********************************/
+/*          Section 1           */
+/********************************/
+
+/**
+ *  For Title
+ */
+section.top-section > .content-wrapper > .header {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+/********************************/
+/*          Section 2           */
+/********************************/
+
+section.section-2 > .content-wrapper > .content p {
+  color: rgba(71, 26, 12, 1)
+}
+
+/********************************/
+/*            Club              */
+/********************************/
+
+.header.club-header-wrapper {
+  width: 300px;
+  margin: 0px auto;
+  border-bottom: 2px solid white;
+}
+
+.club-wrapper {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  margin: 40px auto;
+}
+
+.club-wrapper > .club-background-wrapper {
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.club-wrapper > .club-background-wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
+.club-wrapper > .club-content-wrapper {
+  width: 75%;
+  height: 100%;
+  color: white;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.club-wrapper > .club-content-wrapper > .club-header {
+  width: 75%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border: 1px solid white;
+
+}
+.club-wrapper > .club-content-wrapper > .club-header > span {
+  font-size: 0.5em;
+  margin-left: 100px;
+}
+
+
+/**
+ *  For New
+ */
+.header.new-header-wrapper {
+  width: 300px;
+  color: rgba(51, 126, 121, 1) !important;
+  margin: 30px auto;
+  border-bottom: 2px solid rgba(51, 126, 121, 1) !important;
+}
+
+.new-content-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 15%;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.new-content-wrapper > .new-content {
+  display: inline-block;
+  color: rgba(63, 14, 0, 1);
+  padding: 5px 20px;
+  margin-bottom: 80px;
+  border: 1px solid rgba(63, 14, 0, 1);
+  border-radius: 20px;
+}
+
+/**/
+/*border-bottom: 1px solid rgba(51, 126, 121, 1);*/
 
 /* For Information Component */
-
+/*
 .information-header {
   width: 300px;
   margin: 0 auto;
   margin-bottom: 40px;
   color: rgba(51, 126, 121, 1);
   border-bottom: 3px solid rgba(51, 126, 121, 1);
-}
-
+}*/
 /**
  *  For Information Club
  */
-
+/*
 .information-club-wrapper {
   color: white;
 }
@@ -48,12 +155,12 @@
   width: 85%;
   padding: 20px 0px;
   border: 1px solid white;
-}
+}*/
 
 /**
  *  For Information New
  */
-.information-new-wrapper {
+/*.information-new-wrapper {
   color: white;
 }
 
@@ -84,4 +191,4 @@
 .information-new > .information-new-content > a {
   color: inherit;
   text-decoration: none;
-}
+}*/

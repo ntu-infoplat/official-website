@@ -21,6 +21,7 @@ p {
 
 h1, h2, h3, h4, h5 {
   font-weight: 100;
+  margin: 0;
 }
 
 h1 {
@@ -182,6 +183,57 @@ section > .content-wrapper > .content {
   text-align: center;
 }
 
+section > .content-wrapper > .content > .component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* For Content Components */
+
+/**
+ *  Btn Back, Next, Top
+ */
+
+section > .content-wrapper > .content > .component > .btn-back,
+section > .content-wrapper > .content > .component > .btn-next,
+section > .content-wrapper > .content > .component > .btn-top {
+  position: absolute;
+}
+
+section > .content-wrapper > .content > .component > .btn-back,
+section > .content-wrapper > .content > .component > .btn-next {
+  width: 30px;
+  height: 30px;
+}
+
+section > .content-wrapper > .content > .component > .btn-top {
+  width: 50px;
+  height: 50px;
+}
+
+section > .content-wrapper > .content > .component > .btn-back > img,
+section > .content-wrapper > .content > .component > .btn-next > img,
+section > .content-wrapper > .content > .component > .btn-top > img {
+  width: 100%;
+}
+
+section > .content-wrapper > .content > .component > .btn-back {
+  right: 20px;
+  bottom: 0;
+}
+
+section > .content-wrapper > .content > .component > .btn-next {
+  right: -50px;
+  bottom: 0;
+}
+
+section > .content-wrapper > .content > .component > .btn-top {
+  right: -70px;
+  bottom: 20px;
+}
 
 /* For Top & Bottom Section */
 

@@ -35,7 +35,7 @@ div#contactInfo.content-wrapper > .contact-wrapper {
 div#contactInfo .contact-wrapper > .header > .subtitle {
   position: relative;
   right: -25%;
-  margin-top: -50px;
+  /*margin-top: -50px;*/
   letter-spacing: 4px;
 }
 
@@ -47,18 +47,13 @@ div#contactInfo .contact-wrapper > .content > .row {
 }
 
 /* social-link */
-div#contactInfo .contact-wrapper > .content > .row.social-link {
+div#contactInfo .contact-wrapper > .content > .row.social {
   margin-top: 50px;
 }
 
-div#contactInfo .contact-wrapper > .content > .row.social-link > img {
+div#contactInfo .contact-wrapper > .content > .row.social > img {
   width: 75px;
   margin: 0 15px;
-}
-
-/* email-link */
-div#contactInfo .contact-wrapper > .content > .row.email-link {
-  margin-top: -20px;
 }
 
 /* description */
@@ -78,7 +73,7 @@ div#contactInfo .contact-wrapper > .content > .row.other {
 }
 
 div#contactInfo .contact-wrapper > .content > .row.information > div {
-  margin: -30px 0;
+  margin: 30px 0;
 }
 
 div#contactInfo .contact-wrapper > .content > .row.information > div > h5 {
@@ -91,7 +86,7 @@ div#contactInfo .contact-wrapper > .content > .row.information > div > h5 {
 /* time */
 div#contactInfo .contact-wrapper > .content > .row.time {
   margin-top: 40px;
-  margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 
 /* other */

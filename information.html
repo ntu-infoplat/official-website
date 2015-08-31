@@ -14,63 +14,83 @@
 
     <div class="main">
       <section class="section-1 top-section">
-        <div class="background-wrapper"></div>
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/information.png" alt="" />
+          </div>
+          <div class="component">
+            <div id="rightLine" class="vertical-line line-left line-white"></div>
+          </div>
+        </div>
         <div class="content-wrapper">
           <div class="header">
-            <h1>資料彙整</h1>
+            <h1>資訊彙整</h1>
           </div>
           <div class="content">
-            <h2>Offering You Solutions</h2>
+            <h3>Offering You Solutions</h3>
           </div>
         </div>
       </section>
-
-      <section class="section-2">
-        <div class="background-wrapper"></div>
-        <div class="content-wrapper">
-          <div class="header">
+      <section class="section-2 bottom-section">
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/index_02.png" alt="" />
           </div>
-          <div class="content">
-            <div class="width-55">
-              <p>
-                你是否曾經覺得，<br>
-                校園裡的活動資訊散亂在各個粉絲專頁？<br>
-                無從搜尋彙整？<br>
-              </p>
-              <p>
-                你有沒有受不了那些不爬文，<br>
-                就直接在ptt或是社團版上發文詢問的經驗？<br>
-              </p>
-              <p>
-                你正在尋找一個容易編輯、方便整理， <br>
-                且搜尋功能完整的資訊平台嗎？<br>
-                InfoPlat 就是你的好幫手！<br>
-              </p>
-            </div>
+          <div class="component">
+            <div id="rightLine" class="vertical-line line-left line-white"></div>
           </div>
         </div>
-      </section>
-
-      <section class="section-3 bottom-section">
-        <div class="background-wrapper"></div>
         <div class="content-wrapper">
+          <!-- 介紹 -->
+          <div class="header"></div>
           <div class="content">
-            <div class="width-55 article">
-              <div class="title-block">
-                台大社團
-              </div>
-              <div class="content-block">
+            <p>你是否曾經覺得，<br>校園裡的活動資訊散亂在各個粉絲專頁，<br>無從搜尋彙整？</p>
+            <p>你有沒有受不了那些不爬文，<br>就直接在 PTT 或是社團板上發文詢問的經驗？</p>
+            <p>你正在尋找一個容易編輯、方便整理，<br>且搜尋功能完整的資訊平台嗎？<br>InfoPlat就是你的好幫手！</p>
+            <div class="component"></div>
+          </div>
 
+          <!-- 台大社團 -->
+          <div class="header club-header-wrapper">
+            <h3>台大社團</h3>
+          </div>
+          <div class="content">
+            <div class="club-wrapper">
+              <div class="club-background-wrapper">
+                <img src="imgs/pic/index_02.png" alt="" />
+              </div>
+              <div class="club-content-wrapper horizontal-vertical-center">
+                <div class="club-header">
+                  <h3>吉他社</h3>
+                  <span>2015/08/01</span>
+                </div>
+                <div class="club-content"></div>
               </div>
             </div>
-            <div class="width-55 article">
-              <div class="title-block">
-                新生懶人包
+            <div class="component">
+              <div class="btn-back">
+                <img src="imgs/icon/btn_back.svg" alt="" />
               </div>
-              <div class="content-block">
+              <div class="btn-next">
+                <img src="imgs/icon/btn_next.svg" alt="" />
+              </div>
+            </div>
+          </div>
 
-                <a href="http://dorm.osa.ntu.edu.tw/main.php">新鮮人須知</a> <br>
-                <a href="http://www.lib.ntu.edu.tw">大一國文選課指南</a>
+          <!-- 新生懶人包 -->
+          <div class="header new-header-wrapper">
+            <h3>新生懶人包</h3>
+          </div>
+          <div class="content new-content-wrapper">
+            <div class="new-content">
+              <h4>新鮮人須知</h4>
+            </div>
+            <div class="new-content">
+              <h4>大一國文選課指南</h4>
+            </div>
+            <div class="component">
+              <div class="btn-top">
+                <img src="imgs/icon/btn_up.svg" alt="" />
               </div>
             </div>
           </div>
@@ -84,6 +104,7 @@
 
   <script type="text/javascript" src="js/libs/react.min.js"></script>
   <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="build/common.js"></script>
+  <script type="text/javascript" src="js/tuneScreen.js"></script>
+  <script type="text/javascript" src="build/common-bundle.js"></script>
 
 </html>

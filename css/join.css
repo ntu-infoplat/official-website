@@ -1,26 +1,111 @@
+
+/**
+ *  For join
+ */
+
+/********************************/
+/*          Section 1           */
+/********************************/
+
+/**
+ *  For Title
+ */
+section.top-section > .content-wrapper > .header {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+section.top-section > .content-wrapper > .content {
+  margin-top: -40px;
+}
+
 /**
  *  Join Component
  */
 
 .join-wrapper {
-  width: 90%;
+  width: 85%;
+  padding: 10px 40px;
   margin: 0 auto;
-  padding: 10px 20px;
   background-color: rgba(51, 126, 121, 0.35);
 }
 
-.join-wrapper > h1 {
-  color: rgba(95, 81, 79, 1);
+.join-wrapper > .join-header {
+  color: rgba(142, 117, 80, 1);
 }
 
-.join-block-wrapper {
-}
-
-.join-block-wrapper > .join-content-wrapper > .join-header,
-.join-block-wrapper > .join-content-wrapper > .join-content {
+.join-wrapper > .join-row {
+  cursor: pointer;
   text-align: left;
+  /*padding: 10px 20px;*/
+  padding-right: 20px;
+  margin: 30px 0;
+  border: 1px solid white;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.join-block-wrapper > .join-content-wrapper > .join-content {
+.join-wrapper > .join-row > .header {
+  color: white;
+}
+
+/* background-color: rgba(140, 122, 113, 1)
+   margin-bottom: 30px;
+*/
+
+.join-wrapper > .join-row > .header > h4 {
+  padding: 5px 15px;
+  margin: 0;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.join-wrapper > .join-row > .content {
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.join-wrapper > .join-row > .content li {
+  color: rgba(64, 33, 15, 1);
+  margin: 15px 30px;
+  list-style-type: none;
+}
+
+.join-wrapper > .join-row > .content li::before {
+  content: "►";
+  color: rgba(141, 123, 115, 1);
+  margin-right: 10px;
+}
+
+/**
+ *  Join Row Active (OnClick)
+ */
+.join-wrapper > .join-row.active {
+  background-color: rgba(203, 208, 206, 1);
+}
+
+.join-wrapper > .join-row.active > .header > h4 {
+  background-color: rgba(140, 122, 113, 1);
+}
+
+.join-wrapper > .join-row.active > .header > div {
   display: none;
+}
+
+.join-wrapper > .join-row.active > .content {
+  max-height: 2000px;
 }

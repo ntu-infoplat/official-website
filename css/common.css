@@ -394,6 +394,14 @@ div#cornerTag > img {
   justify-content: center;
 }
 
+.flex-pull-right {
+  margin-left: auto;
+}
+
+.flex-pull-left {
+  margin-right: auto;
+}
+
 .width-25,
 .width-33,
 .width-40,

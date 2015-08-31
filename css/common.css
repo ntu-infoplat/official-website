@@ -115,7 +115,7 @@ div.main {
 section {
   position: relative;
   width: 100%;
-  /*min-height: 535px;*/
+  min-height: 715px;
   overflow: hidden;
 
   -webkit-transform: skew(0deg, 5deg);

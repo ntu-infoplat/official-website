@@ -7,6 +7,7 @@
       navbarWidth = $('nav').width() + 50;
 
   console.log(sectionBackgroundImage.height());
+  console.log(contentWrapper);
 
   window.onresize = function () {
     deviceWidth = window.innerWidth;

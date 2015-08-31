@@ -13,7 +13,9 @@
     deviceWidth = window.innerWidth;
     console.log(deviceWidth);
     contentWrapper.width(deviceWidth * 0.915 - navbarWidth);
-    topSection.css('min-height', sectionBackgroundImage.height() * SECTIONRATIO);
+    if (sectionBackgroundImage.height() > 0) {
+      topSection.css('min-height', sectionBackgroundImage.height() * SECTIONRATIO);
+    }
   };
 
   $(document).ready(function () {

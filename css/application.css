@@ -1,6 +1,151 @@
 
-/* For applications */
+/**
+ *  For applications
+ */
+
+/********************************/
+/*          Section 1           */
+/********************************/
+
+/**
+ *  For Title
+ */
+section.top-section > .content-wrapper > .header {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+section.top-section > .content-wrapper > .content {
+  margin-top: -40px;
+}
+
+/********************************/
+/*         Application          */
+/********************************/
+
 .application-wrapper {
+  color: white;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+/**
+ *  Top Block
+ */
+.application-wrapper > .top-block {
+  padding: 10px 40px;
+  background-color: rgba(51, 126, 121, 0.5);
+  box-shadow: 3px 0px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* header */
+.application-wrapper > .top-block > .header > .left-block > span {
+  font-size: 0.5em;
+}
+
+.application-wrapper > .top-block > .header > .right-block {
+  padding: 5px;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+
+.application-wrapper > .top-block > .header > .left-block > h2 ,
+.application-wrapper > .top-block > .header > .right-block > h4 {
+  margin: 0
+}
+
+
+
+/* content */
+.application-wrapper > .top-block > .content {
+  padding: 30px 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.application-wrapper > .top-block > .content > .left-block {
+  width: 30%;
+  margin-right: auto;
+}
+
+.application-wrapper > .top-block > .content > .left-block > img{
+  width: 100%;
+}
+
+.application-wrapper > .top-block > .content > .right-block {
+  width: 50%;
+  margin-left: auto;
+  text-align: left;
+}
+
+/**
+ *  Bottom Block
+ */
+
+.application-wrapper > .bottom-block > .footer {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.application-wrapper > .bottom-block > .footer > .left-block {
+  display: inline-block;
+  width: 470px;
+  height: 100%;
+  background-color: rgba(51, 126, 121, 0.5);
+  box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.3);
+}
+
+/*.application-wrapper > .bottom-block > .footer > .right-block {
+  position: absolute;
+  z-index: -50;
+  top: -22.28px;
+  left: 446px;
+  width: 44.4px;
+  height: 44.4px;
+  background-color: rgba(51, 126, 121, 0.5);
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.3);
+}*/
+
+.application-wrapper > .bottom-block > .footer > .right-block {
+  /*position: absolute;*/
+  /*z-index: -50;*/
+  /*top: -3px;*/
+  /*left: 456.33px;*/
+  display: inline-block;
+  position: relative;
+  z-index: -50;
+  top: -11.5px;
+  left: -20.5px;
+  width: 0;
+  height: 0;
+  border-bottom: 22px solid rgba(51, 126, 121, 0.5);
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5); /*for IE*/
+
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/*.application-wrapper {
   position: relative;
 }
 
@@ -47,4 +192,4 @@
 .application > .application-link > a {
   color: white;
   text-decoration: none;
-}
+}*/

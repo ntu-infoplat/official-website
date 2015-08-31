@@ -3,7 +3,7 @@
       deviceWidth,
       topSection = $('section.top-section'),
       sectionBackgroundImage = $('section:first-of-type > .background-wrapper > .background > img');
-      contentWrapper = $('.content-wrapper'),
+      contentWrapper = $('section > .content-wrapper'),
       navbarWidth = $('nav').width() + 50;
 
   console.log(sectionBackgroundImage.height());

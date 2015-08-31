@@ -10,53 +10,57 @@
   <body>
 
     <nav id="navbar"></nav>
-    <div id="rightLine"></div>
+    <div id="rightLine" class="vertical-line line-left line-white"></div>
 
     <div class="main">
       <section class="section-1 top-section">
-        <div class="background-wrapper"></div>
-        <div class="content-wrapper">
-          <div class="header">
-            <h1>聯絡我們</h1>
-          </div>
-          <div class="content">
-            <h2>Contact Us</h2>
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/contact.png" alt="" />
           </div>
         </div>
       </section>
-
-      <section class="section-2 bottom-section">
-        <div class="background-wrapper"></div>
-        <div class="content-wrapper">
+      <div id="contactInfo" class="content-wrapper">
+        <div class="contact-wrapper">
           <div class="header">
-            <h1>Reports</h1>
+            <h1 class="title">聯絡我們</h1>
+            <h4 class="subtitle">Into Your Campus Life</h4>
           </div>
           <div class="content">
-
-            <div class="width-55 article">
-              <div class="title-block">
-                <div class="width-25 date">
-                  NOV 2015<br>
-                  <span>13</span>
-                </div>
-                <div class="width-55 title">
-                  標題~~
-                </div>
+            <div class="row social-link">
+              <img src="imgs/icon/fb_btn.svg" alt="" />
+              <img src="imgs/icon/infoplat_btn.svg" alt="" />
+              <img src="imgs/icon/slack_btn.svg" alt="" />
+            </div>
+            <div class="row email-link">
+              <h4>contact@infoplat.org</h4>
+            </div>
+            <div class="row description">
+              <h4>如何捕捉野生的Infoplat夥伴呢？</h4>
+            </div>
+            <div class="row information">
+              <div>
+                <h5>NTUOSC 台灣大學開源社 社課</h5>
               </div>
-              <div class="content-block">
-                <div class="width-55 img">
-                 <img src="./imgs/pic/01.jpg"/>
-                </div>
-
-                <div class="width-55 intro">
-                  <p>
-                    又到了新生入學的時刻<br>還在煩惱怎麼尋找你的直屬嗎？<br>
-                    我們提供一個可以找直屬的平台，讓這件事情變得十分簡單
-                  </p>
-                </div>
+              <div>
+                <h5>SITCON 台北定期聚 @台大二活</h5>
               </div>
             </div>
-
+            <div class="row time">
+              <h4>隔週日晚上 18:30 - 21:30</h4>
+            </div>
+            <div class="row other">
+              <p>InfoPlat 台北聚</p>
+              <p>InfoPlat 桃園聚</p>
+              <p><<現正籌備中>></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-2 bottom-section">
+        <div class="background-wrapper">
+          <div class="background">
+            <img src="imgs/pic/index_02.png" alt="" />
           </div>
         </div>
       </section>
@@ -68,6 +72,8 @@
 
   <script type="text/javascript" src="js/libs/react.min.js"></script>
   <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="build/common.js"></script>
+  <script type="text/javascript" src="js/tuneScreen.js"></script>
+  <script type="text/javascript" src="build/common-bundle.js"></script>
+  <script type="text/javascript" src="js/contact/contact.js"></script>
 
 </html>

@@ -589,3 +589,20 @@ div#cornerTag > img {
     margin-top: 100px;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  section.top-section > .content-wrapper > .content {
+    margin-left: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  section.top-section > .content-wrapper > .header {
+    margin-top: 60px;
+  }
+  section.top-section > .content-wrapper > .content {
+    margin-left: 60px;
+  }
+
+}

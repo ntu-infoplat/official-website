@@ -9,7 +9,7 @@
 div#contactInfo {
   position: absolute;
   z-index: 50;
-  top: 17%;
+  top: 12%;
   left: 0;
 }
 
@@ -97,5 +97,27 @@ div#contactInfo .contact-wrapper > .content > .row.other > p {
 @media only screen and (max-width: 1240px) {
   div#contactInfo {
     margin-left: 240px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  div#contactInfo {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  div#contactInfo.content-wrapper > .contact-wrapper {
+    margin: 0px;
+  }
+  section.bottom-section,
+  section.bottom-section > .background-wrapper > .background img {
+    min-height: 512px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  div#contactInfo {
+    top: 5%;
   }
 }

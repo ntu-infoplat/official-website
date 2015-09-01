@@ -3,9 +3,9 @@
  *  For join
  */
 
-/**
- *  Join Component
- */
+/********************************/
+/*        Join Component        */
+/********************************/
 
 .join-wrapper {
   width: 85%;
@@ -93,3 +93,7 @@
 .join-wrapper > .join-row.active > .content {
   max-height: 2000px;
 }
+
+/********************************/
+/*          Responsive          */
+/********************************/

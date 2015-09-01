@@ -75,6 +75,10 @@ section.section-2 #column > .component > .btn-top {
   text-decoration: none;
 }
 
+/********************************/
+/*          Responsive          */
+/********************************/
+
 /* For Columns */
 /*.column-wrapper {
   position: relative;

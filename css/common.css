@@ -193,6 +193,13 @@ section > .content-wrapper > .content > .component {
 
 /* For Content Components */
 
+.btn-back,
+.btn-next,
+.btn-top,
+.btn-control > .circle {
+  cursor: pointer;
+}
+
 /**
  *  Btn Back, Next, Top
  */

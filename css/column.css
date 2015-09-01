@@ -1,7 +1,94 @@
 
+/**
+ *  For column
+ */
+
+/********************************/
+/*          Section 1           */
+/********************************/
+
+/**
+ *  For Title
+ */
+section.top-section > .content-wrapper > .header {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+/********************************/
+/*          Section 2           */
+/********************************/
+
+section.section-2 > .content-wrapper > .content p {
+  color: rgba(71, 26, 12, 1);
+}
+
+section.section-2 #column > .component > .btn-top {
+  bottom: -100px;
+}
+
+/********************************/
+/*           Columns            */
+/********************************/
+
+.column-wrapper {
+  position: relative;
+  width: 600px;
+  padding: 10px 40px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+  background-color: rgba(83, 84, 84, 0.5);
+  box-shadow: 7px 7px 3px rgba(0, 0, 0, 0.4);
+}
+
+.application-wrapper > .application-top-block-wrapper > .application-header-wrapper > .left-block > span {
+  font-size: 0.5em;
+}
+
+/* header */
+.column-wrapper > .column-header-wrapper {
+  color: white;
+}
+
+.column-wrapper > .column-header-wrapper > .left-block > span {
+  font-size: 0.5em;
+}
+
+.column-wrapper > .column-header-wrapper > .right-block {
+  margin-left: 20px
+}
+
+/* content */
+.column-wrapper > .column-content-wrapper {
+  text-align: left;
+  padding: 30px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.column-wrapper > .column-content-wrapper > .top-block > img {
+  width: 50%;
+}
+
+.column-wrapper > .column-content-wrapper > .bottom-block > p {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+/* footer */
+.column-wrapper > .column-footer-wrapper {
+  text-align: right;
+  padding: 0 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.column-wrapper > .column-footer-wrapper > a {
+  color: white;
+  text-decoration: none;
+}
 
 /* For Columns */
-.column-wrapper {
+/*.column-wrapper {
   position: relative;
 }
 
@@ -47,4 +134,4 @@
 .column > .column-link > a {
   color: white;
   text-decoration: none;
-}
+}*/

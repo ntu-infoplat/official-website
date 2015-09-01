@@ -1,6 +1,7 @@
 (function () {
   var SECTIONRATIO = 589 / 589,
       deviceWidth,
+      topSectionMinHeight,
       topSection = $('section.top-section'),
       sectionBackgroundImage = $('section.top-section > .background-wrapper > .background > img');
       contentWrapper = $('.main > .content-wrapper, section > .content-wrapper'),
@@ -11,10 +12,18 @@
 
   window.onresize = function () {
     deviceWidth = window.innerWidth;
+    topSectionMinHeight = sectionBackgroundImage.height() * SECTIONRATIO;
     console.log(deviceWidth);
-    contentWrapper.width(deviceWidth * 0.915 - navbarWidth);
-    if (sectionBackgroundImage.height() > 0) {
-      topSection.css('min-height', sectionBackgroundImage.height() * SECTIONRATIO);
+    console.log(sectionBackgroundImage.height() );
+    if (deviceWidth > 1024) {
+      contentWrapper.width(deviceWidth * 0.915 - navbarWidth);
+    } else {
+      if (contentWrapper.attr('style')) {
+        contentWrapper.removeAttr('style');
+      }
+    }
+    if (sectionBackgroundImage.height() > 0 && topSectionMinHeight < 715) {
+      topSection.css('min-height', topSectionMinHeight);
     }
   };
 

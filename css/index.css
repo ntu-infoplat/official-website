@@ -62,10 +62,20 @@
 /**
  *  Content
  */
+
+section.section-1 > .content-wrapper > .header {
+  margin-top: 154px; /* 54 + 100 */
+  margin-left: 0;
+}
+
 section.section-1 > .content-wrapper > .header img {
   width: 60%;
 }
 
+section.section-1 > .content-wrapper > .content {
+  margin-top: 0;
+  margin-left: 360px;
+}
 
 /********************************/
 /*          Section 2           */
@@ -116,4 +126,41 @@ section.section-2 > .content-wrapper > .content {
 	height: 0;
 	border-bottom: 75px solid white;
 	border-left: 75px solid transparent;
+}
+
+/********************************/
+/*          Responsive          */
+/********************************/
+
+@media only screen and (max-width: 1024px) {
+  section.section-1 > .content-wrapper > .header {
+    margin-top: 80px;
+    margin-left: -60px;
+  }
+  section.section-1 > .content-wrapper > .header img {
+    width: 65%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  section.section-1 > .content-wrapper > .content {
+    margin-top: -15px;
+    margin-left: 0px;
+    margin-right: -300px;
+  }
+  section.section-2 > .content-wrapper > .content {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 512px) {
+  section.section-1 > .content-wrapper > .content {
+    margin-right: -150px;
+  }
 }

@@ -3,18 +3,6 @@
  *  For join
  */
 
-/********************************/
-/*          Section 1           */
-/********************************/
-
-/**
- *  For Title
- */
-section.top-section > .content-wrapper > .header {
-  margin-top: 200px;
-  margin-left: -200px;
-}
-
 /**
  *  Join Component
  */

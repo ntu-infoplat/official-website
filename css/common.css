@@ -259,12 +259,14 @@ section.top-section > .background-wrapper > .background > img {
 }
 
 section.top-section > .content-wrapper > .header {
-  margin-top: 154px; /* 54 + 100 */
+  margin-top: 200px;
+  margin-left: -150px;
 }
 
 section.top-section > .content-wrapper > .content {
   color: white;
-  margin-left: 400px;
+  margin-top: -30px;
+  margin-left: 300px;
   letter-spacing: 4px;
   font-size: 1.3em;
 }
@@ -506,5 +508,71 @@ div#cornerTag > img {
 @media only screen and (max-width: 1240px) {
   section > .content-wrapper {
     margin-left: 240px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  html, body {
+    font-size: 16px;
+  }
+  section {
+    width: 100%;
+    height: auto;
+    -webkit-transform: skew(0deg, 0deg);
+    -moz-transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
+    -o-transform: skew(0deg, 0deg);
+    transform: skew(0deg, 0deg);
+  }
+  section > .background-wrapper,
+  section > .content-wrapper {
+    -webkit-transform: skew(0deg, 0deg);
+    -moz-transform: skew(0deg, 0deg);
+    -ms-transform: skew(0deg, 0deg);
+    -o-transform: skew(0deg, 0deg);
+    transform: skew(0deg, 0deg);
+  }
+  section > .background-wrapper {
+    top: 0;
+  }
+  section.top-section {
+    text-align: center;
+    margin-top: 0;
+  }
+  section.top-section > .background-wrapper,
+  section.top-section > .background-wrapper > .background > img {
+    padding: 0;
+  }
+  section.top-section > .content-wrapper > .header {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  section.top-section > .content-wrapper > .content {
+    color: white;
+    margin-top: -30px;
+    letter-spacing: 4px;
+    font-size: 1.3em;
+  }
+  section.bottom-section,
+  section.bottom-section > .background-wrapper,
+  section.bottom-section > .background-wrapper > .background,
+  section.bottom-section > .background-wrapper > .background img {
+    min-height: 0;
+  }
+  section > .content-wrapper {
+    width: 100%;
+    margin-left: 0px;
+  }
+  section > .content-wrapper > .header {
+    margin-top: 30px;
+  }
+  .component, #cornerTag {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html, body {
+    font-size: 14px;
   }
 }

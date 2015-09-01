@@ -106,7 +106,7 @@ section.section-2 > .content-wrapper > .content p {
   .header.new-header-wrapper {
     font-size: 1.5em;
   }
-  .content-2 {
+  .content.content-2 {
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.2);
   }

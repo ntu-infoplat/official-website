@@ -9,7 +9,7 @@
 
 .join-wrapper {
   width: 85%;
-  padding: 10px 40px;
+  padding: 20px 30px;
   margin: 0 auto;
   background-color: rgba(51, 126, 121, 0.35);
 }
@@ -35,6 +35,12 @@
 
 .join-wrapper > .join-row > .header {
   color: white;
+  
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 /* background-color: rgba(140, 122, 113, 1)
@@ -45,22 +51,22 @@
   padding: 5px 15px;
   margin: 0;
 
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .join-wrapper > .join-row > .content {
   max-height: 0;
   overflow: hidden;
 
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: min-height 0.5s ease-in-out;
+  -moz-transition: min-height 0.5s ease-in-out;
+  -ms-transition: min-height 0.5s ease-in-out;
+  -o-transition: min-height 0.5s ease-in-out;
+  transition: min-height 0.5s ease-in-out;
 }
 
 .join-wrapper > .join-row > .content li {
@@ -79,7 +85,12 @@
  *  Join Row Active (OnClick)
  */
 .join-wrapper > .join-row.active {
+  padding-right: 0px;
   background-color: rgba(203, 208, 206, 1);
+}
+
+.join-wrapper > .join-row.active > .header {
+  margin-bottom: 10px;
 }
 
 .join-wrapper > .join-row.active > .header > h4 {
@@ -97,3 +108,33 @@
 /********************************/
 /*          Responsive          */
 /********************************/
+
+@media only screen and (max-width: 1024px) {
+  section.bottom-section,
+  section.bottom-section > .background-wrapper > .background img {
+    min-height: 512px;
+  }
+  .join-wrapper {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .join-wrapper {
+    width: 70%;
+    padding: 20px 20px;
+  }
+  .join-wrapper > .join-row {
+    margin: 15px 0;
+  }
+  .join-wrapper > .join-row > .content li {
+    margin: 5px 15px;
+  }
+  .join-wrapper > .join-row.active > .header {
+    width: 100%;
+    background-color: rgba(140, 122, 113, 1);
+  }
+  .join-wrapper > .join-row.active > .header > h4 {
+    background-color: transparent;
+  }
+}

@@ -35,7 +35,7 @@
 
 .join-wrapper > .join-row > .header {
   color: white;
-  
+
   -webkit-transition: background-color 0.5s ease-in-out;
   -moz-transition: background-color 0.5s ease-in-out;
   -ms-transition: background-color 0.5s ease-in-out;
@@ -131,10 +131,23 @@
     margin: 5px 15px;
   }
   .join-wrapper > .join-row.active > .header {
-    width: 100%;
     background-color: rgba(140, 122, 113, 1);
   }
   .join-wrapper > .join-row.active > .header > h4 {
+    width: 100%;
     background-color: transparent;
   }
+}
+
+@media only screen and (max-width: 420px) {
+  .join-wrapper {
+    width: 80%;
+  }
+  .join-wrapper > .join-row > .header > h4 {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
 }

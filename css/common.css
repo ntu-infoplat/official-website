@@ -594,7 +594,6 @@ div#cornerTag > img {
   section.top-section > .content-wrapper > .content {
     margin-left: 100px;
   }
-
 }
 
 @media only screen and (max-width: 320px) {
@@ -604,5 +603,4 @@ div#cornerTag > img {
   section.top-section > .content-wrapper > .content {
     margin-left: 60px;
   }
-
 }

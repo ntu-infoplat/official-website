@@ -121,3 +121,28 @@ div#contactInfo .contact-wrapper > .content > .row.other > p {
     top: 5%;
   }
 }
+
+@media only screen and (max-width: 512px) {
+}
+
+@media only screen and (max-width: 420px) {
+  div#contactInfo .contact-wrapper > .header > .title {
+    font-size: 3em;
+  }
+  div#contactInfo .contact-wrapper > .content > .row.social {
+    margin-top: 20px;
+  }
+  div#contactInfo .contact-wrapper > .content > .row.social > img {
+    width: 60px;
+    margin: 0 5px;
+  }
+  div#contactInfo .contact-wrapper > .content > .row.description {
+    margin: 50px 0;
+  }
+  div#contactInfo .contact-wrapper > .content > .row.information > div {
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}

@@ -62,11 +62,11 @@
   max-height: 0;
   overflow: hidden;
 
-  -webkit-transition: min-height 0.5s ease-in-out;
-  -moz-transition: min-height 0.5s ease-in-out;
-  -ms-transition: min-height 0.5s ease-in-out;
-  -o-transition: min-height 0.5s ease-in-out;
-  transition: min-height 0.5s ease-in-out;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  -moz-transition: max-height 0.5s ease-in-out;
+  -ms-transition: max-height 0.5s ease-in-out;
+  -o-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .join-wrapper > .join-row > .content li {
@@ -102,7 +102,7 @@
 }
 
 .join-wrapper > .join-row.active > .content {
-  max-height: 2000px;
+  max-height: 1000px;
 }
 
 /********************************/

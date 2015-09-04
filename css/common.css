@@ -384,11 +384,11 @@ nav#navbar .content > ul > li > a {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;*/
 
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 
 nav#navbar .content > ul > li > a:first-child {
@@ -567,6 +567,13 @@ div#cornerTag > img {
 /********************************/
 /*          Responsive          */
 /********************************/
+
+/* bigger than 1240 */
+@media only screen and (min-width: 1240px) {
+  section > .content-wrapper {
+    margin-left: 240px;
+  }
+}
 
 @media only screen and (max-width: 1240px) {
   section > .content-wrapper {

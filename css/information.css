@@ -18,17 +18,40 @@ section.section-2 > .content-wrapper > .content p {
 .header.club-header-wrapper {
   width: 300px;
   color: rgba(51, 126, 121, 1) !important;
-  margin: 0px auto;
+  margin: 40px auto;
   border-bottom: 5px solid rgba(51, 126, 121, 1);
 }
 
 .club-wrapper {
-  position: relative;
-  z-index: 50;
+  position: absolute;
+  opacity: 0.2;
+  top: 0px;
+  right: -250px;
   width: 400px;
-  height: 450px;
-  margin: 40px auto;
+  height: 400px;
+  margin-bottom: 40px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.club-wrapper.active {
+  position: relative;
+  opacity: 1;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.club-wrapper.inactive {
+  position: absolute;
+  opacity: 0.2;
+  left: -250px;
+  right: auto;
 }
 
 .club-wrapper > .club-background-wrapper {
@@ -66,10 +89,18 @@ section.section-2 > .content-wrapper > .content p {
   margin-left: 100px;
 }
 
-
 /**
- *  For New
+ *  For btn-next, btn-back in Club Block
  */
+section.section-2 > .content-wrapper > .content-2 > .component > .btn-next,
+section.section-2 > .content-wrapper > .content-2 > .component > .btn-back {
+  bottom: -75px;
+}
+
+/********************************/
+/*             New              */
+/********************************/
+
 .header.new-header-wrapper {
   width: 300px;
   color: rgba(51, 126, 121, 1) !important;
@@ -111,7 +142,11 @@ section.section-2 > .content-wrapper > .content p {
     background-color: rgba(0, 0, 0, 0.2);
   }
   .club-wrapper {
+    top: 20px;
     margin-top: 0;
+  }
+  .club-wrapper.active {
+    top: 0;
   }
 }
 

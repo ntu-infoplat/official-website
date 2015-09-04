@@ -575,7 +575,7 @@ div#cornerTag > img {
 /********************************/
 
 /* bigger than 1240 */
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1241px) {
   section > .content-wrapper {
     margin-left: 240px;
   }

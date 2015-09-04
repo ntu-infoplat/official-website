@@ -150,10 +150,25 @@ section.section-2 > .content-wrapper > .content-2 > .component > .btn-back {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .club-wrapper {
+    right: -350px;
+  }
+  .club-wrapper.inactive {
+    left: -350px;
+  }
+}
+
 @media only screen and (max-width: 512px) {
   .header.club-header-wrapper,
   .header.new-header-wrapper {
     font-size: 2em;
+  }
+  .club-wrapper {
+    right: -375px;
+  }
+  .club-wrapper.inactive {
+    left: -375px;
   }
   .new-content-wrapper {
     margin-bottom: 20px;
@@ -167,9 +182,13 @@ section.section-2 > .content-wrapper > .content-2 > .component > .btn-back {
 
 @media only screen and (max-width: 420px) {
   .club-wrapper {
+    right: -285px;
     width: 300px;
     height: 300px;
     margin-bottom: 20px;
+  }
+  .club-wrapper.inactive {
+    left: -285px;
   }
   .header.club-header-wrapper,
   .header.new-header-wrapper {
@@ -179,8 +198,12 @@ section.section-2 > .content-wrapper > .content-2 > .component > .btn-back {
 
 @media only screen and (max-width: 320px) {
   .club-wrapper {
+    right: -225px;
     width: 240px;
     height: 240px;
+  }
+  .club-wrapper.inactive {
+    left: -225px;
   }
 }
 

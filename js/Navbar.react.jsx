@@ -21,7 +21,8 @@ var Navbar = React.createClass({
     var linkNode = this.state.data.map(function (link, i) {
       return (
         <li key={i}>
-            <a className="horizontal-vertical-center" href={link.url}>{link.title}</a>
+          <a className="horizontal-vertical-center" href={link.url}>{link.title}</a>
+          <a className="horizontal-vertical-center" href={link.url}>{link.title}</a>
         </li>
       )
     });

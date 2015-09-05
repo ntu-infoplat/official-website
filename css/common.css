@@ -110,6 +110,20 @@ ul {
 div.main {
   position: relative;
   overflow-y: hidden;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+div.main.active {
+  -webkit-filter: grayscale(60%);
+  -moz-filter: grayscale(60%);
+  -ms-filter: grayscale(60%);
+  -o-filter: grayscale(60%);
+  filter: grayscale(60%);
 }
 
 section {

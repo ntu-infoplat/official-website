@@ -18,9 +18,10 @@ var Navbar = React.createClass({
     })
   },
   mobileNavbarOnClick: function () {
-    var navbar = $('nav#navbar'),
+    var main = $('div.main'),
+        navbar = $('nav#navbar'),
         mobileNavbar = $('nav#navbar .mobileNavbar');
-    console.log('onclick');
+    main.toggleClass('active');
     navbar.toggleClass('active');
     mobileNavbar.toggleClass('active');
   },

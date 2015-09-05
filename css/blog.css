@@ -1,6 +1,6 @@
 
 /**
- *  For column
+ *  For blog
  */
 
 /********************************/
@@ -11,7 +11,7 @@ section.section-2 > .content-wrapper > .content p {
   color: rgba(71, 26, 12, 1);
 }
 
-section.section-2 #column > .component > .btn-top {
+section.section-2 #blog > .component > .btn-top {
   bottom: -100px;
 }
 
@@ -19,7 +19,7 @@ section.section-2 #column > .component > .btn-top {
 /*           Columns            */
 /********************************/
 
-.column-wrapper {
+.blog-wrapper {
   position: absolute;
   top: 0;
   right: -750px;
@@ -36,14 +36,14 @@ section.section-2 #column > .component > .btn-top {
   transition: all 0.3s ease-in-out;
 }
 
-.column-wrapper.active {
+.blog-wrapper.active {
   position: relative;
   right: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
-.column-wrapper.inactive {
+.blog-wrapper.inactive {
   position: absolute;
   opacity: 0;
   left: 0;
@@ -53,43 +53,43 @@ section.section-2 #column > .component > .btn-top {
 }
 
 /* header */
-.column-wrapper > .column-header-wrapper {
+.blog-wrapper > .blog-header-wrapper {
   color: white;
 }
 
-.column-wrapper > .column-header-wrapper > .left-block > span {
+.blog-wrapper > .blog-header-wrapper > .left-block > span {
   font-size: 0.5em;
 }
 
-.column-wrapper > .column-header-wrapper > .right-block {
+.blog-wrapper > .blog-header-wrapper > .right-block {
   margin-left: 20px
 }
 
 /* content */
-.column-wrapper > .column-content-wrapper {
+.blog-wrapper > .blog-content-wrapper {
   text-align: left;
   padding: 30px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
 
-.column-wrapper > .column-content-wrapper > .top-block > img {
+.blog-wrapper > .blog-content-wrapper > .top-block > img {
   width: 50%;
 }
 
-.column-wrapper > .column-content-wrapper > .bottom-block > p {
+.blog-wrapper > .blog-content-wrapper > .bottom-block > p {
   color: rgba(0, 0, 0, 1) !important;
 }
 
 /* footer */
-.column-wrapper > .column-footer-wrapper {
+.blog-wrapper > .blog-footer-wrapper {
   text-align: right;
   padding: 0 20px;
   padding-top: 10px;
   padding-bottom: 30px;
 }
 
-.column-wrapper > .column-footer-wrapper > a {
+.blog-wrapper > .blog-footer-wrapper > a {
   color: white;
   text-decoration: none;
 }
@@ -99,42 +99,42 @@ section.section-2 #column > .component > .btn-top {
 /********************************/
 
 @media only screen and (max-width: 1024px) {
-  .column-wrapper {
+  .blog-wrapper {
     width: 450px;
   }
 }
 
 @media only screen and (max-width: 512px) {
-  .column-wrapper {
+  .blog-wrapper {
     width: 320px;
     padding: 10px 20px;
   }
-  .column-wrapper > .column-content-wrapper {
+  .blog-wrapper > .blog-content-wrapper {
     padding: 10px;
   }
-  .column-wrapper > .column-footer-wrapper {
+  .blog-wrapper > .blog-footer-wrapper {
     padding-right: 0;
     padding-bottom: 10px;
   }
 }
 
 @media only screen and (max-width: 420px) {
-  .column-wrapper {
+  .blog-wrapper {
     width: 260px;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .column-wrapper {
+  .blog-wrapper {
     width: 220px;
   }
 }
 /* For Columns */
-/*.column-wrapper {
+/*.blog-wrapper {
   position: relative;
 }
 
-.column {
+.blog {
   background-color: rgba(83, 84, 84, 0.5);
   text-align: left;
   padding: 0 20px;
@@ -144,36 +144,36 @@ section.section-2 #column > .component > .btn-top {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
-.column > .column-header > div {
+.blog > .blog-header > div {
   display: inline-block;
   color: white;
   margin-right: 30px;
 }
 
-.column > .column-header > .column-date > div {
+.blog > .blog-header > .blog-date > div {
   width: 100%;
   text-align: center;
 }
 
-.column > .column-header > .column-date > div:nth-child(2) {
+.blog > .blog-header > .blog-date > div:nth-child(2) {
   font-size: 2em;
 }
 
-.column > .column-header,
-.column > .column-content {
+.blog > .blog-header,
+.blog > .blog-content {
   border-bottom: 1px solid white;
 }
 
-.column > .column-content {
+.blog > .blog-content {
   padding: 20px 40px;
 }
 
-.column > .column-link {
+.blog > .blog-link {
   padding: 10px;
   float: right;
 }
 
-.column > .column-link > a {
+.blog > .blog-link > a {
   color: white;
   text-decoration: none;
 }*/

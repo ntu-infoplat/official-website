@@ -494,6 +494,45 @@ nav#navbar .mobileNavbar.active {
 
 nav#navbar .mobileNavbar > img {
   width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav#navbar .mobileNavbar > i {
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  font-size: 0em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav#navbar .mobileNavbar.active > img {
+  width: 0%;
+}
+
+nav#navbar .mobileNavbar.active > i {
+  visibility: visible;
+  opacity: 1;
+  font-size: 5em;
+
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 /**
@@ -737,6 +776,9 @@ div#cornerTag > img {
 }
 
 @media only screen and (max-width: 420px) {
+  nav#navbar .mobileNavbar.active > i {
+    font-size: 4em;
+  }
   section.top-section > .content-wrapper > .content {
     margin-left: 100px;
   }

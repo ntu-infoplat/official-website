@@ -46,6 +46,7 @@ var Navbar = React.createClass({
         </div>
         <div className="mobileNavbar horizontal-vertical-center" onClick={ this.mobileNavbarOnClick }>
           <img src="imgs/icon/logo.svg"></img>
+          <i className="fa fa-angle-right fa-6"></i>
         </div>
       </div>
     );

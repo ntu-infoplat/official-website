@@ -75,7 +75,7 @@ var Navbar = React.createClass({displayName: "Navbar",
           React.createElement("ul", null, linkNode)
         ), 
         React.createElement("div", {className: "mobileNavbar horizontal-vertical-center", onClick:  this.mobileNavbarOnClick}, 
-          React.createElement("img", {src: "imgs/icon/logo.svg"}), 
+          React.createElement("img", {src: "imgs/icon/logo_img.svg"}), 
           React.createElement("i", {className: "fa fa-angle-right fa-6"})
         )
       )

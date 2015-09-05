@@ -1,5 +1,5 @@
 (function () {
-  var SECTIONRATIO = 589 / 589,
+  var SECTIONRATIO = 589 / 610,
       deviceWidth,
       topSectionMinHeight,
       topSection = $('section.top-section'),
@@ -22,6 +22,7 @@
         contentWrapper.removeAttr('style');
       }
     }
+    console.log(topSectionMinHeight);
     if (sectionBackgroundImage.height() > 0 && topSectionMinHeight < 715) {
       topSection.css('min-height', topSectionMinHeight);
     }

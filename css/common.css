@@ -263,7 +263,7 @@ section > .content-wrapper > .content > .component > .btn-top {
  */
 
 section.top-section {
-  min-height: 644px; /* 535 + 54 */
+  /*min-height: 644px; /* 535 + 54 */
   margin-top: -54px;
 }
 
@@ -528,6 +528,12 @@ nav#navbar .mobileNavbar.active > i {
   -o-transform-origin: center center;
   transform-origin: center center;
 
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -664,7 +670,58 @@ div#cornerTag > img {
 /*          Responsive          */
 /********************************/
 
-/* bigger than 1240 */
+@media only screen and (min-width: 1920px) {
+  section.top-section {
+    margin-top: -123px;
+  }
+  section.bottom-section {
+    padding-bottom: 123px;
+    margin-bottom: -123px;
+  }
+  section > .background-wrapper {
+    top: -123px;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1920px) {
+  section.top-section {
+    margin-top: -80px;
+  }
+  section.bottom-section {
+    padding-bottom: 80px;
+    margin-bottom: -80px;
+  }
+  section > .background-wrapper {
+    top: -80px;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1680px) {
+  section.top-section {
+    margin-top: -71px;
+  }
+  section.bottom-section {
+    padding-bottom: 71px;
+    margin-bottom: -71px;
+  }
+  section > .background-wrapper {
+    top: -71px;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  section.top-section {
+    margin-top: -62px;
+  }
+  section.bottom-section {
+    padding-bottom: 62px;
+    margin-bottom: -62px;
+  }
+  section > .background-wrapper {
+    top: -62px;
+  }
+}
+
 @media only screen and (min-width: 1281px) {
   section > .content-wrapper {
     margin-left: 240px;

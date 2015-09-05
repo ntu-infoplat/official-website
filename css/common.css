@@ -344,6 +344,12 @@ nav#navbar {
   height: 100%;
   background-color: rgba(51, 126, 121, 0.7);
   box-shadow: -3.5px 0px 1px rgba(0, 0, 0, 0.4);
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav#navbar .header{
@@ -443,6 +449,37 @@ nav#navbar .content > ul > li:hover > a:last-child {
   -ms-transform: rotateX(-90deg);
   -o-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
+}
+
+nav#navbar .mobileNavbar {
+  position: fixed;
+  cursor: pointer;
+  left: 25px;
+  bottom: -100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(51, 126, 121, 0.7);
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav#navbar.active {
+  top: 0;
+  left: 0;
+}
+
+nav#navbar .mobileNavbar.active {
+  left: 250px;
+}
+
+nav#navbar .mobileNavbar > img {
+  width: 100%;
 }
 
 /**
@@ -575,13 +612,13 @@ div#cornerTag > img {
 /********************************/
 
 /* bigger than 1240 */
-@media only screen and (min-width: 1241px) {
+@media only screen and (min-width: 1281px) {
   section > .content-wrapper {
     margin-left: 240px;
   }
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1280px) {
   section > .content-wrapper {
     margin-left: 240px;
   }
@@ -590,6 +627,13 @@ div#cornerTag > img {
 @media only screen and (max-width: 1024px) {
   html, body {
     font-size: 16px;
+  }
+  nav#navbar {
+    left: -190px;
+  }
+  nav#navbar .mobileNavbar {
+    left: 25px;
+    bottom: 25px;
   }
   section {
     width: 100%;
@@ -652,6 +696,12 @@ div#cornerTag > img {
   html, body {
     font-size: 14px;
   }
+  nav#navbar .mobileNavbar {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    bottom: 20px;
+  }
   section.top-section > .content-wrapper > .header {
     margin-top: 150px;
   }
@@ -661,6 +711,12 @@ div#cornerTag > img {
   html, body {
     font-size: 12px;
   }
+  nav#navbar .mobileNavbar {
+    width: 65px;
+    height: 65px;
+    left: 15px;
+    bottom: 15px;
+  }
   section.top-section > .content-wrapper > .header {
     margin-top: 100px;
   }
@@ -669,6 +725,12 @@ div#cornerTag > img {
 @media only screen and (max-width: 420px) {
   section.top-section > .content-wrapper > .content {
     margin-left: 100px;
+  }
+  nav#navbar .mobileNavbar {
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    bottom: 10px;
   }
 }
 

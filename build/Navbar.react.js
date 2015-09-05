@@ -1,11 +1,11 @@
 var Navbar = React.createClass({displayName: "Navbar",
-  getInitialState: function(){
+  getInitialState: function() {
     return {
       data: []
     }
   },
-  componentDidMount: function(){
-    console.log(this.state.data);
+  componentDidMount: function() {
+    // console.log(this.state.data);
     $.ajax({
         url: this.props.data,
         dataType: 'json',
@@ -16,6 +16,13 @@ var Navbar = React.createClass({displayName: "Navbar",
           console.error(this.props.data, status, err.toString());
         }.bind(this)
     })
+  },
+  mobileNavbarOnClick: function () {
+    var navbar = $('nav#navbar'),
+        mobileNavbar = $('nav#navbar .mobileNavbar');
+    console.log('onclick');
+    navbar.toggleClass('active');
+    mobileNavbar.toggleClass('active');
   },
   render: function () {
     var linkNode = this.state.data.map(function (link, i) {
@@ -35,6 +42,9 @@ var Navbar = React.createClass({displayName: "Navbar",
         ), 
         React.createElement("div", {className: "content"}, 
           React.createElement("ul", null, linkNode)
+        ), 
+        React.createElement("div", {className: "mobileNavbar horizontal-vertical-center", onClick:  this.mobileNavbarOnClick}, 
+          React.createElement("img", {src: "imgs/icon/logo.svg"})
         )
       )
     );
